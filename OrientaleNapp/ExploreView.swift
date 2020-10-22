@@ -1,13 +1,13 @@
 //
-//  ContentView.swift
+//  ExploreView.swift
 //  OrientaleNapp
 //
-//  Created by Alexey Antonov on 21/10/2020.
+//  Created by Luca Pariota on 22/10/2020.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct ExploreView: View {
     var body: some View {
         NavigationView {
             Form {
@@ -47,7 +47,7 @@ struct ContentView: View {
             }
             .navigationTitle("Explore")
             .navigationBarItems(trailing: Button("Add") {
-                
+            
             })
             
             
@@ -55,9 +55,9 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ExploreView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ExploreView()
     }
 }
 
@@ -69,10 +69,7 @@ struct Rigasettings: View {
     
     var body: some View {
         HStack{
-            Image(nomeImmagine)
-                .resizable()
-                .frame(width: 50, height: 50)
-                .foregroundColor(.orange)
+            Image(systemName: nomeImmagine)
             VStack{
                 Text(pendedItem)
                     .fontWeight(.bold)
@@ -83,4 +80,3 @@ struct Rigasettings: View {
         
     }
 }
-
