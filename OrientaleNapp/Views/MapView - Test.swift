@@ -8,7 +8,7 @@
 import SwiftUI
 import MapKit
 
-struct MapView: View {
+struct MapView2: View {
         
         @State var region = MKCoordinateRegion(center: CLLocationCoordinate2D (latitude: 40.8518, longitude: 14.2681), latitudinalMeters: 10000, longitudinalMeters: 10000)
         @State var tracking: MapUserTrackingMode = .follow
@@ -25,7 +25,7 @@ struct MapView: View {
     }
 
 
-struct MapView_Previews: PreviewProvider {
+struct MapView2_Previews: PreviewProvider {
     static var previews: some View {
         MapView()
     }
