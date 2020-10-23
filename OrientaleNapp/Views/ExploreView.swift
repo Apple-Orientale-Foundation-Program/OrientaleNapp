@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ExploreView: View {
+    
+    @State var showPickerView = false
+    
         var body: some View {
             NavigationView {
                 Form {
@@ -49,12 +52,23 @@ struct ExploreView: View {
                     }
                     
                 }
-                .navigationTitle("Explore")
-                .navigationBarItems(trailing: Button("+") {
+                
+               
+                
+                .navigationBarTitle("Explore")
+                .navigationBarItems(trailing: Button(action: {
+                    self.showPickerView.toggle()
+                    }) {
+                    Image(systemName: "plus.circle")
+                        .resizable()
+                        .foregroundColor(.orange)
+                        .frame(width: 30, height: 30)
                     
-                })
-                
-                
+                }
+            )
+
+            }.sheet(isPresented: $showPickerView) {
+              PickerView(showPickerView: self.$showPickerView)
             }
         }
     }

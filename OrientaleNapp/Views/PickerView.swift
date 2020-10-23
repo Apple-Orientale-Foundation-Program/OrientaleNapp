@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct PickerView: View {
+    @Binding var showPickerView: Bool
     
     var items = ["Coffee", "Pizza", "Toy", "Book"]
     @State private var selectedItem = 0
     @State var numberOfItems: Int = 0
     
     var body: some View {
+        
+        
         
         NavigationView {
             
@@ -62,19 +65,30 @@ struct PickerView: View {
                 
             }
             
-            .navigationBarItems(leading: Button("Cancel") {}, trailing: Button("Done") {}).foregroundColor(.black)
+            .navigationBarTitle(Text("Pended Items"), displayMode: .inline)
+            .navigationBarItems(trailing: Button(action: {
+                print("Dismissing sheet view...")
+                self.showPickerView = false
+            }) {
+                Text("Done").bold()
+            })
             
+        }// fine NavigationView
         
-        } // fine NavigationView
-    
     }
     
     
     
 }
 
-struct PickerView_Previews: PreviewProvider {
+/*struct PickerView_Previews: PreviewProvider {
     static var previews: some View {
         PickerView()
+    }
+}*/
+
+struct PickerView_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }
