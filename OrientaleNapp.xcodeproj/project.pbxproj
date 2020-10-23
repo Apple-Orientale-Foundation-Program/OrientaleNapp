@@ -14,6 +14,7 @@
 		523B8349254083DE001A5C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523B8348254083DE001A5C1B /* Assets.xcassets */; };
 		523B834C254083DE001A5C1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523B834B254083DE001A5C1B /* Preview Assets.xcassets */; };
 		BA4A63372542D66C00C5B032 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4A63362542D66C00C5B032 /* MapView.swift */; };
+		F4C4D8D52542EB67003C8949 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C4D8D42542EB67003C8949 /* PickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		523B834B254083DE001A5C1B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		523B834D254083DE001A5C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA4A63362542D66C00C5B032 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		F4C4D8D42542EB67003C8949 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 				190A07432541CB5F008E90C2 /* ExploreView.swift */,
 				BA4A63362542D66C00C5B032 /* MapView.swift */,
 				190A075B2541D2DA008E90C2 /* LogoView.swift */,
+				F4C4D8D42542EB67003C8949 /* PickerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			files = (
 				190A07552541CEB7008E90C2 /* ContentView.swift in Sources */,
 				190A075C2541D2DA008E90C2 /* LogoView.swift in Sources */,
+				F4C4D8D52542EB67003C8949 /* PickerView.swift in Sources */,
 				190A07442541CB5F008E90C2 /* ExploreView.swift in Sources */,
 				BA4A63372542D66C00C5B032 /* MapView.swift in Sources */,
 				523B8345254083DC001A5C1B /* OrientaleNappApp.swift in Sources */,
