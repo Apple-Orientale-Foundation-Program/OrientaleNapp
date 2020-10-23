@@ -21,7 +21,7 @@ struct PickerView: View {
         NavigationView {
             
             VStack {
-                Text ("You selected: \(items[selectedItem])")
+                Text ("You selected \(items[selectedItem])")
                     .font(.title3)
                     .fontWeight(.regular)
                     .padding()
