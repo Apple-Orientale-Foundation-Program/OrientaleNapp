@@ -13,7 +13,8 @@ struct ExploreView: View {
                 Form {
                     Section {
                         NavigationLink(
-                            destination: MapView(),
+                            destination: MapView()
+                                .navigationBarTitleDisplayMode(.inline),
                             label: {
                                 Rigasettings(nomeImmagine: "coffee", pendedItem: "Pending Coffee", totalPended: "100 pended coffees")
                             })
@@ -22,7 +23,8 @@ struct ExploreView: View {
                     
                     Section {
                         NavigationLink(
-                            destination: MapView(),
+                            destination: MapView()
+                                .navigationBarTitleDisplayMode(.inline),
                             label: {
                                 Rigasettings(nomeImmagine: "pizza", pendedItem: "Pending Pizza", totalPended: "100 pended pizzas")
                             })
@@ -30,7 +32,8 @@ struct ExploreView: View {
                     
                     Section {
                         NavigationLink(
-                            destination: MapView(),
+                            destination: MapView()
+                                .navigationBarTitleDisplayMode(.inline),
                             label: {
                                 Rigasettings(nomeImmagine: "toy", pendedItem: "Pending Toy", totalPended: "100 pended toys")
                             })
@@ -38,7 +41,8 @@ struct ExploreView: View {
                     
                     Section {
                         NavigationLink(
-                            destination: MapView(),
+                            destination: MapView()
+                                .navigationBarTitleDisplayMode(.inline),
                             label: {
                                 Rigasettings(nomeImmagine: "book", pendedItem: "Pending Book", totalPended: "100 pended books")
                             })
