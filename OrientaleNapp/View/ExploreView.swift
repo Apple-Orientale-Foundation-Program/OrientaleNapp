@@ -46,7 +46,7 @@ struct ExploreView: View {
                     
                 }
                 .navigationTitle("Explore")
-                .navigationBarItems(trailing: Button("Add") {
+                .navigationBarItems(trailing: Button("+") {
                     
                 })
                 
