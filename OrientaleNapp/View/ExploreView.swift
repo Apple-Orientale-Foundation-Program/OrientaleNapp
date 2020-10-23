@@ -15,7 +15,7 @@ struct ExploreView: View {
                         NavigationLink(
                             destination: MapView(),
                             label: {
-                                Rigasettings(nomeImmagine: "coffee", pendedItem: "Pending CoMffee", totalPended: "100 pended coffees")
+                                Rigasettings(nomeImmagine: "coffee", pendedItem: "Pending Coffee", totalPended: "100 pended coffees")
                             })
                         
                     }
