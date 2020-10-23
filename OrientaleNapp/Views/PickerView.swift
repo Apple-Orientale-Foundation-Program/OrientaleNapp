@@ -62,16 +62,28 @@ struct PickerView: View {
                 Stepper(value: $numberOfItems, in: 0...50, label:{
                     Text ("Number of items: \(numberOfItems)")
                 }).padding(.all)
+                .foregroundColor(.black)
                 
             }
             
             .navigationBarTitle(Text("Pended Items"), displayMode: .inline)
-            .navigationBarItems(trailing: Button(action: {
+            .navigationBarItems(leading: Button(action: {
+                print("Dismissing sheet view...")
+                self.showPickerView = false
+            })  {
+                HStack {
+                    Image(systemName: "chevron.backward")
+                        .resizable()
+                        .frame(width: 17.0)
+                    Text("Cancel").bold()
+                }
+            }
+            ,trailing: Button(action: {
                 print("Dismissing sheet view...")
                 self.showPickerView = false
             }) {
                 Text("Done").bold()
-            })
+            }).foregroundColor(.black)
             
         }// fine NavigationView
         
