@@ -10,7 +10,7 @@ import SwiftUI
 struct LogoView: View {
     var body: some View {
         ZStack{
-            LinearGradient(gradient: Gradient(colors: [Color.orange, Color.white]), startPoint: .top, endPoint: .center)
+            LinearGradient(gradient: Gradient(colors: [Color(red: 0.85, green: 0.55, blue: 0.30), Color.white]), startPoint: .top, endPoint: .center)
                 .edgesIgnoringSafeArea(.vertical)
             
             HStack {
