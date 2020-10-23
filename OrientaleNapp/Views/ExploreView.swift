@@ -59,7 +59,7 @@ struct ExploreView: View {
                 .navigationBarItems(trailing: Button(action: {
                     self.showPickerView.toggle()
                     }) {
-                    Image(systemName: "plus.circle")
+                    Image(systemName: "plus")
                         .resizable()
                         .foregroundColor(.orange)
                         .frame(width: 30, height: 30)
