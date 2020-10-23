@@ -13,16 +13,16 @@ struct ExploreView: View {
                 Form {
                     Section {
                         NavigationLink(
-                            destination: /*@START_MENU_TOKEN@*/Text("Destination")/*@END_MENU_TOKEN@*/,
+                            destination: MapView(),
                             label: {
-                                Rigasettings(nomeImmagine: "coffee", pendedItem: "Pending Coffee", totalPended: "100 pended coffees")
+                                Rigasettings(nomeImmagine: "coffee", pendedItem: "Pending CoMffee", totalPended: "100 pended coffees")
                             })
                         
                     }
                     
                     Section {
                         NavigationLink(
-                            destination: /*@START_MENU_TOKEN@*/Text("Destination")/*@END_MENU_TOKEN@*/,
+                            destination: MapView(),
                             label: {
                                 Rigasettings(nomeImmagine: "pizza", pendedItem: "Pending Pizza", totalPended: "100 pended pizzas")
                             })
@@ -30,7 +30,7 @@ struct ExploreView: View {
                     
                     Section {
                         NavigationLink(
-                            destination: /*@START_MENU_TOKEN@*/Text("Destination")/*@END_MENU_TOKEN@*/,
+                            destination: MapView(),
                             label: {
                                 Rigasettings(nomeImmagine: "toy", pendedItem: "Pending Toy", totalPended: "100 pended toys")
                             })
@@ -38,7 +38,7 @@ struct ExploreView: View {
                     
                     Section {
                         NavigationLink(
-                            destination: /*@START_MENU_TOKEN@*/Text("Destination")/*@END_MENU_TOKEN@*/,
+                            destination: MapView(),
                             label: {
                                 Rigasettings(nomeImmagine: "book", pendedItem: "Pending Book", totalPended: "100 pended books")
                             })
