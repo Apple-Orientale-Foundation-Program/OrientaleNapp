@@ -18,7 +18,7 @@ struct PickerView: View {
         NavigationView {
             
             VStack {
-                Text ("You selected: \(items[selectedItem])")
+                Text ("You selected \(items[selectedItem])")
                     .font(.title3)
                     .fontWeight(.regular)
                     .padding()
@@ -63,6 +63,7 @@ struct PickerView: View {
             }
             
             .navigationBarItems(leading: Button("Cancel") {}, trailing: Button("Done") {}).foregroundColor(.black)
+            
             
         
         } // fine NavigationView
