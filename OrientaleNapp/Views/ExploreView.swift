@@ -18,7 +18,7 @@ struct ExploreView: View {
                     Section {
                         NavigationLink(
                             destination:
-                                MapView()
+                                MapView(item: item)
                                     .navigationBarTitleDisplayMode(.inline),
                             label: {
                                 RowView(item: item)

@@ -27,7 +27,7 @@ struct MapView2: View {
 
 struct MapView2_Previews: PreviewProvider {
     static var previews: some View {
-        MapView()
+        MapView2()
     }
 }
 
