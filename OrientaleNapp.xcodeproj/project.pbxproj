@@ -13,6 +13,7 @@
 		523B8345254083DC001A5C1B /* OrientaleNappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B8344254083DC001A5C1B /* OrientaleNappApp.swift */; };
 		523B8349254083DE001A5C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523B8348254083DE001A5C1B /* Assets.xcassets */; };
 		523B834C254083DE001A5C1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523B834B254083DE001A5C1B /* Preview Assets.xcassets */; };
+		6EEE6AE5957EBF0D7609A468 /* Pods_OrientaleNapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85478494E175CC50C6D8B39D /* Pods_OrientaleNapp.framework */; };
 		BAF95C302546C5AA00ED3620 /* toy.json in Resources */ = {isa = PBXBuildFile; fileRef = BAF95C2F2546C5AA00ED3620 /* toy.json */; };
 		BAF95C332546C92400ED3620 /* pizza.json in Resources */ = {isa = PBXBuildFile; fileRef = BAF95C322546C92400ED3620 /* pizza.json */; };
 		BAF95C362546CB2800ED3620 /* book.json in Resources */ = {isa = PBXBuildFile; fileRef = BAF95C352546CB2800ED3620 /* book.json */; };
@@ -26,16 +27,20 @@
 		F558D79625462AA00024F2A8 /* BundleDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F558D79525462AA00024F2A8 /* BundleDecoder.swift */; };
 		F5D80083254346290008D6D4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D80082254346290008D6D4 /* Item.swift */; };
 		F5D80086254346360008D6D4 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D80085254346360008D6D4 /* RowView.swift */; };
+		F5E77BFB25470D1D00CACFE1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5E77BFA25470D1D00CACFE1 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04FEBE840D8A0097F5CA8435 /* Pods-OrientaleNapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrientaleNapp.release.xcconfig"; path = "Target Support Files/Pods-OrientaleNapp/Pods-OrientaleNapp.release.xcconfig"; sourceTree = "<group>"; };
 		190A07432541CB5F008E90C2 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		190A07542541CEB7008E90C2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		190A075B2541D2DA008E90C2 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		1B80FBF27D34952B10F3E85C /* Pods-OrientaleNapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrientaleNapp.debug.xcconfig"; path = "Target Support Files/Pods-OrientaleNapp/Pods-OrientaleNapp.debug.xcconfig"; sourceTree = "<group>"; };
 		523B8341254083DC001A5C1B /* OrientaleNapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrientaleNapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		523B8344254083DC001A5C1B /* OrientaleNappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientaleNappApp.swift; sourceTree = "<group>"; };
 		523B8348254083DE001A5C1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		523B834B254083DE001A5C1B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		85478494E175CC50C6D8B39D /* Pods_OrientaleNapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrientaleNapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF95C2F2546C5AA00ED3620 /* toy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = toy.json; sourceTree = "<group>"; };
 		BAF95C322546C92400ED3620 /* pizza.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pizza.json; sourceTree = "<group>"; };
 		BAF95C352546CB2800ED3620 /* book.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = book.json; sourceTree = "<group>"; };
@@ -50,6 +55,7 @@
 		F5D800612542F4F80008D6D4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5D80082254346290008D6D4 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		F5D80085254346360008D6D4 /* RowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
+		F5E77BFA25470D1D00CACFE1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EEE6AE5957EBF0D7609A468 /* Pods_OrientaleNapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,11 +84,31 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		405B18DE67B69F221E1D9845 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B80FBF27D34952B10F3E85C /* Pods-OrientaleNapp.debug.xcconfig */,
+				04FEBE840D8A0097F5CA8435 /* Pods-OrientaleNapp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4EC07A9866015EBDBA307544 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85478494E175CC50C6D8B39D /* Pods_OrientaleNapp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		523B8338254083DC001A5C1B = {
 			isa = PBXGroup;
 			children = (
 				523B8343254083DC001A5C1B /* OrientaleNapp */,
 				523B8342254083DC001A5C1B /* Products */,
+				405B18DE67B69F221E1D9845 /* Pods */,
+				4EC07A9866015EBDBA307544 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +131,7 @@
 				F5D80081254346290008D6D4 /* Models */,
 				190A07492541CBC4008E90C2 /* Views */,
 				F5D800612542F4F80008D6D4 /* Info.plist */,
+				F5E77BFA25470D1D00CACFE1 /* GoogleService-Info.plist */,
 				523B8348254083DE001A5C1B /* Assets.xcassets */,
 				523B834A254083DE001A5C1B /* Preview Content */,
 			);
@@ -169,9 +197,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 523B8350254083DE001A5C1B /* Build configuration list for PBXNativeTarget "OrientaleNapp" */;
 			buildPhases = (
+				BE13BEB83777E1EE406EA0DC /* [CP] Check Pods Manifest.lock */,
 				523B833D254083DC001A5C1B /* Sources */,
 				523B833E254083DC001A5C1B /* Frameworks */,
 				523B833F254083DC001A5C1B /* Resources */,
+				CF0373B35327C2A181221DEF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -220,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAF95C362546CB2800ED3620 /* book.json in Resources */,
+				F5E77BFB25470D1D00CACFE1 /* GoogleService-Info.plist in Resources */,
 				F558D78E2545DBAB0024F2A8 /* coffee.json in Resources */,
 				523B834C254083DE001A5C1B /* Preview Assets.xcassets in Resources */,
 				BAF95C332546C92400ED3620 /* pizza.json in Resources */,
@@ -230,6 +261,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BE13BEB83777E1EE406EA0DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OrientaleNapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF0373B35327C2A181221DEF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OrientaleNapp/Pods-OrientaleNapp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OrientaleNapp/Pods-OrientaleNapp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OrientaleNapp/Pods-OrientaleNapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		523B833D254083DC001A5C1B /* Sources */ = {
@@ -372,6 +445,7 @@
 		};
 		523B8351254083DE001A5C1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B80FBF27D34952B10F3E85C /* Pods-OrientaleNapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -394,6 +468,7 @@
 		};
 		523B8352254083DE001A5C1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04FEBE840D8A0097F5CA8435 /* Pods-OrientaleNapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

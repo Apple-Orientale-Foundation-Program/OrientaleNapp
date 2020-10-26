@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseDatabase
 
 struct PickerView: View {
     @Binding var showPickerView: Bool
@@ -68,12 +69,11 @@ struct PickerView: View {
             
             .navigationBarTitle(Text("Pended Items"), displayMode: .inline)
             .navigationBarItems(leading: Button(action: {
-                print("Dismissing sheet view...")
                 self.showPickerView = false
             })  {Text("Cancel").bold()}
             ,trailing: Button(action: {
-                print("Dismissing sheet view...")
                 self.showPickerView = false
+                addCoffee()
             }) {
                 Text("Done").bold()
             }).foregroundColor(Color("newColor3"))
@@ -81,9 +81,25 @@ struct PickerView: View {
         }// fine NavigationView
         
     }
+}
+
+func addCoffee() {
+    var ref: DatabaseReference!
+    ref = Database.database().reference()
     
-    
-    
+    ref.runTransactionBlock({ (currentData: MutableData) -> TransactionResult in
+        if var post = currentData.value as? [String: Int] {
+            post["coffees"]! += 1
+            currentData.value = post
+            
+            return TransactionResult.success(withValue: currentData)
+        }
+        return TransactionResult.success(withValue: currentData)
+    }) { (error, committed, snapshot) in
+        if let error = error {
+            print(error.localizedDescription)
+        }
+    }
 }
 
 struct PickerView_Previews: PreviewProvider {
