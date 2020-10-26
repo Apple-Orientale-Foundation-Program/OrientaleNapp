@@ -31,7 +31,7 @@ struct PickerView: View {
                 Picker(selection: $selectedItem, label: Text("")) {
                     
                     ForEach(0 ..< items.count) {
-                        Text(self.items[$0])
+                        Text(self.items[$0]).foregroundColor($0 == selectedItem ? Color.orange : Color.blue)
                     }
                 }
                 
@@ -70,14 +70,7 @@ struct PickerView: View {
             .navigationBarItems(leading: Button(action: {
                 print("Dismissing sheet view...")
                 self.showPickerView = false
-            })  {
-                HStack {
-                    Image(systemName: "chevron.backward")
-                        .resizable()
-                        .frame(width: 17.0)
-                    Text("Cancel").bold()
-                }
-            }
+            })  {Text("Cancel").bold()}
             ,trailing: Button(action: {
                 print("Dismissing sheet view...")
                 self.showPickerView = false
