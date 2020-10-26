@@ -15,4 +15,23 @@ final class Coordinator: NSObject, MKMapViewDelegate {
     init(_ control: MapView) {
         self.control = control
     }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let identifier = "Placemark"
+        
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+        
+        if annotationView == nil {
+            annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            let label = UILabel()
+            label.text = "Placeholder"
+            label.textColor = UIColor.darkGray
+            annotationView?.canShowCallout = true
+            annotationView?.detailCalloutAccessoryView = label
+        } else {
+            annotationView?.annotation = annotation
+        }
+        
+        return annotationView
+    }
 }

@@ -18,6 +18,9 @@
 		F5032C2C2542F1A300BD5FB1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5032C2B2542F1A300BD5FB1 /* Coordinator.swift */; };
 		F52E0C292542F02300379B7F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52E0C282542F02300379B7F /* MapView.swift */; };
 		F52E0C332542F10E00379B7F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52E0C322542F10E00379B7F /* LocationManager.swift */; };
+		F558D78E2545DBAB0024F2A8 /* coffees.json in Resources */ = {isa = PBXBuildFile; fileRef = F558D78D2545DBAB0024F2A8 /* coffees.json */; };
+		F558D791254625420024F2A8 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F558D790254625420024F2A8 /* Location.swift */; };
+		F558D79625462AA00024F2A8 /* BundleDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F558D79525462AA00024F2A8 /* BundleDecoder.swift */; };
 		F5D80083254346290008D6D4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D80082254346290008D6D4 /* Item.swift */; };
 		F5D80086254346360008D6D4 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D80085254346360008D6D4 /* RowView.swift */; };
 /* End PBXBuildFile section */
@@ -35,6 +38,9 @@
 		F5032C2B2542F1A300BD5FB1 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F52E0C282542F02300379B7F /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		F52E0C322542F10E00379B7F /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		F558D78D2545DBAB0024F2A8 /* coffees.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = coffees.json; sourceTree = "<group>"; };
+		F558D790254625420024F2A8 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		F558D79525462AA00024F2A8 /* BundleDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleDecoder.swift; sourceTree = "<group>"; };
 		F5D800612542F4F80008D6D4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5D80082254346290008D6D4 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		F5D80085254346360008D6D4 /* RowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
@@ -85,9 +91,11 @@
 			isa = PBXGroup;
 			children = (
 				523B8344254083DC001A5C1B /* OrientaleNappApp.swift */,
-				F5D80081254346290008D6D4 /* Models */,
 				F5032C2A2542F1A300BD5FB1 /* Coordinators */,
+				F558D79425462A7D0024F2A8 /* Decoders */,
+				F558D79325462A060024F2A8 /* JSON */,
 				F52E0C312542F10E00379B7F /* Managers */,
+				F5D80081254346290008D6D4 /* Models */,
 				190A07492541CBC4008E90C2 /* Views */,
 				F5D800612542F4F80008D6D4 /* Info.plist */,
 				523B8348254083DE001A5C1B /* Assets.xcassets */,
@@ -120,10 +128,27 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		F558D79325462A060024F2A8 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				F558D78D2545DBAB0024F2A8 /* coffees.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		F558D79425462A7D0024F2A8 /* Decoders */ = {
+			isa = PBXGroup;
+			children = (
+				F558D79525462AA00024F2A8 /* BundleDecoder.swift */,
+			);
+			path = Decoders;
+			sourceTree = "<group>";
+		};
 		F5D80081254346290008D6D4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				F5D80082254346290008D6D4 /* Item.swift */,
+				F558D790254625420024F2A8 /* Location.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -185,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F558D78E2545DBAB0024F2A8 /* coffees.json in Resources */,
 				523B834C254083DE001A5C1B /* Preview Assets.xcassets in Resources */,
 				523B8349254083DE001A5C1B /* Assets.xcassets in Resources */,
 			);
@@ -197,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F558D79625462AA00024F2A8 /* BundleDecoder.swift in Sources */,
 				F5D80083254346290008D6D4 /* Item.swift in Sources */,
 				F52E0C292542F02300379B7F /* MapView.swift in Sources */,
 				190A07552541CEB7008E90C2 /* ContentView.swift in Sources */,
@@ -207,6 +234,7 @@
 				BA4A63372542D66C00C5B032 /* MapView - Test.swift in Sources */,
 				F5D80086254346360008D6D4 /* RowView.swift in Sources */,
 				523B8345254083DC001A5C1B /* OrientaleNappApp.swift in Sources */,
+				F558D791254625420024F2A8 /* Location.swift in Sources */,
 				F5032C2C2542F1A300BD5FB1 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

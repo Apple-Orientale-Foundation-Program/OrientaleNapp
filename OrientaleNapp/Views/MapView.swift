@@ -31,23 +31,12 @@ struct MapView: UIViewRepresentable {
         let span = MKCoordinateSpan(latitudeDelta: 0.009, longitudeDelta: 0.009)
         let region = MKCoordinateRegion(center: coordinate, span: span)
         uiView.setRegion(region, animated: true)
-        let searchRequest = MKLocalSearch.Request()
-        searchRequest.naturalLanguageQuery = "coffee"
-        searchRequest.region = region
-        let search = MKLocalSearch(request: searchRequest)
-        search.start { (response, error) in
-            guard let response = response else {
-                return
-            }
-            
-            for item in response.mapItems {
-                if let name = item.name {
-                    let annotation = MKPointAnnotation()
-                    annotation.title = name
-                    annotation.coordinate = item.placemark.location!.coordinate
-                    uiView.addAnnotation(annotation)
-                }
-            }
+        let locations = Bundle.main.decode("coffees")
+        for location in locations {
+            let annotation = MKPointAnnotation()
+            annotation.title = location.name
+            annotation.coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+            uiView.addAnnotation(annotation)
         }
     }
 }
