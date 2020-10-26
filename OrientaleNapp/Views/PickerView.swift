@@ -76,7 +76,7 @@ struct PickerView: View {
                 self.showPickerView = false
             }) {
                 Text("Done").bold()
-            }).foregroundColor(Color("newColor7"))
+            }).foregroundColor(Color("newColor3"))
             
         }// fine NavigationView
         
