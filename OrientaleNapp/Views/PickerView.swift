@@ -31,7 +31,7 @@ struct PickerView: View {
                 Picker(selection: $selectedItem, label: Text("")) {
                     
                     ForEach(0 ..< items.count) {
-                        Text(self.items[$0]).foregroundColor($0 == selectedItem ? Color("newColor3"): Color.blue)
+                        Text(self.items[$0]).foregroundColor($0 == selectedItem ? Color("newColor3"): Color("newColor1"))
                     }
                 }
                 
@@ -76,7 +76,7 @@ struct PickerView: View {
                 self.showPickerView = false
             }) {
                 Text("Done").bold()
-            }).foregroundColor(Color("newColor3"))
+            }).foregroundColor(Color("newColor7"))
             
         }// fine NavigationView
         
