@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "Toy.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "icons8-teddy-bear-100-2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
