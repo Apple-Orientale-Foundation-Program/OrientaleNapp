@@ -1,0 +1,6 @@
+framework module Pods_OrientaleNapp {
+  umbrella header "Pods-OrientaleNapp-umbrella.h"
+
+  export *
+  module * { export * }
+}
