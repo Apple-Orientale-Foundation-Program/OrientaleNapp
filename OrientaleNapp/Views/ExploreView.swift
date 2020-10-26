@@ -37,7 +37,7 @@ struct ExploreView: View {
                     Image(systemName: "plus")
                         .resizable()
 
-                        .foregroundColor(Color("newColor3"))
+                        .foregroundColor(Color("newColor7"))
                         .font(.title)
                 }
             )

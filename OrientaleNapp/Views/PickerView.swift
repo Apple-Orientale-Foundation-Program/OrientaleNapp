@@ -13,7 +13,7 @@ struct PickerView: View {
     
     var items = ["Coffee", "Pizza", "Toy", "Book"]
     @State private var selectedItem = 0
-    @State var numberOfItems: Int = 0
+    @State var numberOfItems: Int = 1
     
     var body: some View {
         
@@ -32,7 +32,7 @@ struct PickerView: View {
                 Picker(selection: $selectedItem, label: Text("")) {
                     
                     ForEach(0 ..< items.count) {
-                        Text(self.items[$0]).foregroundColor($0 == selectedItem ? Color("newColor3"): Color("newColor1"))
+                        Text(self.items[$0]).foregroundColor($0 == selectedItem ? Color("newColor7"): Color("newColor1"))
                     }
                 }
                 
@@ -60,7 +60,7 @@ struct PickerView: View {
                 }
                 
                 
-                Stepper(value: $numberOfItems, in: 0...50, label:{
+                Stepper(value: $numberOfItems, in: 1...50, label:{
                     Text ("Number of items: \(numberOfItems)")
                 }).padding(.all)
                 .foregroundColor(.black)
@@ -76,7 +76,7 @@ struct PickerView: View {
                 addCoffee()
             }) {
                 Text("Done").bold()
-            }).foregroundColor(Color("newColor3"))
+            }).foregroundColor(Color("newColor7"))
             
         }// fine NavigationView
         
