@@ -9,6 +9,7 @@ import SwiftUI
 import FirebaseDatabase
 
 struct PickerView: View {
+    
     @Binding var showPickerView: Bool
     var items = ["Coffee", "Pizza", "Toy", "Book"]
     @State private var selectedPlace: Locations?
@@ -17,50 +18,34 @@ struct PickerView: View {
     
     var body: some View {
         
-        
-        
         NavigationView {
             
             VStack {
                 NavigationLink (
-                    destination: SearchView(selectedItem: $selectedPlace)){
-                    Text(selectedPlace == nil ? "Add place" : selectedPlace!.title)
+                    destination: SearchView(selectedItem: $selectedPlace)
+                ) {
+                    Text(selectedPlace == nil ?
+                            "Add place" :
+                            selectedPlace!.title)
                         .font(.title3)
                         .foregroundColor(.black)
                 }
-                Text("")
-
                 
-                Picker(selection: $selectedItem, label: Text("")) {
-                    
+                Picker(
+                    selection: $selectedItem,
+                    label: Text("")
+                ) {
                     ForEach(0 ..< items.count) {
-                        Text(self.items[$0]).foregroundColor($0 == selectedItem ? Color("newColor7"): Color("newColor1"))
+                        Text(self.items[$0])
+                            .foregroundColor($0 == selectedItem ?
+                                Color("newColor7") :
+                                Color("newColor1"))
                     }
                 }
                 
                 Image("\(items[selectedItem])")
-            
-                HStack {
-                    Image("")
-                        .resizable()
-                        .padding([.leading, .bottom, .trailing])
-                        .scaledToFit()
-                    
-                    Image("")
-                        .resizable()
-                        .padding([.leading, .bottom, .trailing])
-                        .scaledToFit()
-                    Image("")
-                        .resizable()
-                        .padding([.leading, .bottom, .trailing])
-                        .scaledToFit()
-                    Image("")
-                        .resizable()
-                        .padding([.leading, .bottom, .trailing])
-                        .scaledToFit()
-                }
                 
-                Spacer ()
+                Spacer()
                     .frame(height: 0.0)
                 
                 Text ("You selected \(items[selectedItem])")
@@ -69,30 +54,38 @@ struct PickerView: View {
                     .padding()
                     .foregroundColor(Color.black)
                 
-                Spacer ()
+                Spacer()
                     .frame(height: 40.0)
                 
-                Stepper(value: $numberOfItems, in: 1...50, label:{
-                    Text ("Number of items: \(numberOfItems)")
-                        .font(.title3)
-                }).padding(.all, 27.0)
-                .foregroundColor(.black)
-                
+                Stepper(
+                    value: $numberOfItems,
+                    in: 1...50,
+                    label: {
+                        Text ("Number of items: \(numberOfItems)")
+                            .font(.title3)
+                    })
+                    .padding(.all, 27.0)
+                    .foregroundColor(.black)
             }
-            
-            .navigationBarTitle(Text("Pended Items"), displayMode: .inline)
-            .navigationBarItems(leading: Button(action: {
-                self.showPickerView = false
-            })  {Text("Cancel").bold()}
-            ,trailing: Button(action: {
-                self.showPickerView = false
-                addCoffee()
-            }) {
-                Text("Done").bold()
-            }).foregroundColor(Color("newColor7"))
-            
-        }// fine NavigationView
-        
+            .navigationBarTitle(
+                Text("Pended items"),
+                displayMode: .inline
+            )
+            .navigationBarItems(
+                leading: Button(action: {
+                    self.showPickerView = false
+                } ) {
+                    Text("Cancel").bold()
+                },
+                trailing: Button(action: {
+                    self.showPickerView = false
+                    addCoffee()
+                } ) {
+                    Text("Done").bold()
+                }
+            )
+            .foregroundColor(Color("newColor7"))
+        }
     }
 }
 
