@@ -78,8 +78,10 @@ struct PickerView: View {
                     Text("Cancel").bold()
                 },
                 trailing: Button(action: {
-                    self.showPickerView = false
-                    updateDatabase()
+                    if selectedPlace != nil {
+                        self.showPickerView = false
+                        updateDatabase()
+                    }
                 } ) {
                     Text("Done").bold()
                 }
