@@ -58,7 +58,7 @@ var places = [
     Place(title: "Joes cafe", location: CLLocation(latitude: 40.8494446, longitude: 14.25856)),
     Place(title: "Opera Teatrodelgusto", location: CLLocation(latitude: 40.8465213, longitude: 14.2515705)),
     Place(title: "caffe' la nuit srl", location: CLLocation(latitude: 40.8308068, longitude: 14.2502983)),
-    Place(title: "Mazz - Bar Pasticceria", location: CLLocation(latitude: 40.850333, longitude: 14.255619))),
+    Place(title: "Mazz - Bar Pasticceria", location: CLLocation(latitude: 40.850333, longitude: 14.255619)),
     Place(title: "Certosa Cafe", location: CLLocation(latitude: 40.8438275, longitude: 14.2407437)),
     Place(title: "Arx Cafe", location: CLLocation(latitude: 40.844362, longitude: 14.2398126)),
     Place(title: "Angelo Carbone", location: CLLocation(latitude: 40.8519362, longitude: 14.2545437)),
@@ -159,7 +159,7 @@ var places = [
     Place(title: "L'Angolo del Caffè", location: CLLocation(latitude: 40.8415687, longitude: 14.2540987)),
     Place(title: "Caffè del Professore", location: CLLocation(latitude: 40.8463093, longitude: 14.2561601)),
     Place(title: "Made In Sud", location: CLLocation(latitude: 40.8562256, longitude: 14.2573129)),
-    Place(title: "Caffè Duello", location: CLLocation(latitude: 40.8550921, longitude: )14.2556673),
+    Place(title: "Caffè Duello", location: CLLocation(latitude: 40.8550921, longitude: 14.2556673)),
     Place(title: "Liberty", location: CLLocation(latitude: 40.8525558, longitude: 14.250299)),
     Place(title: "Il Mantegno", location: CLLocation(latitude: 40.8484465, longitude: 14.2559314)),
     Place(title: "La Campagnola", location: CLLocation(latitude: 40.8483765, longitude: 14.255981)),
@@ -247,5 +247,5 @@ var places = [
     Place(title: "Il fuori orario", location: CLLocation(latitude: 40.8192275, longitude: 14.1749772)),
     Place(title: "Enzo di Nocera", location: CLLocation(latitude: 40.845963, longitude: 14.227867)),
     Place(title: "Marotta & Cafiero Editori", location: CLLocation(latitude: 40.9132820, longitude: 14.2353350)),
-    Place(title: "Ubik", location: CLLocation(latitude: 40.8481022, longitude: 14.2542706)),
+    Place(title: "Ubik", location: CLLocation(latitude: 40.8481022, longitude: 14.2542706))
 ]
