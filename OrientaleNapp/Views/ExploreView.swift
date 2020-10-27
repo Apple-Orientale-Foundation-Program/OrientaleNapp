@@ -42,9 +42,10 @@ struct ExploreView: View {
                 }
             )
         }
+        
         .sheet(isPresented: $showPickerView) {
             PickerView(showPickerView: self.$showPickerView)
-        }
+        }.accentColor(Color("newColor7"))
     }
 }
 
