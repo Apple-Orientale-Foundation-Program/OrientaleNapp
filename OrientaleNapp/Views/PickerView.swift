@@ -23,7 +23,7 @@ struct PickerView: View {
             
             VStack {
                 NavigationLink (
-                    destination: SearchView(item: $selectedPlace)){
+                    destination: SearchView(selectedItem: $selectedPlace)){
                     Text(selectedPlace == nil ? "Add place" : selectedPlace!.title)
                         .font(.title3)
                         .foregroundColor(.black)
