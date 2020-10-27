@@ -35,6 +35,7 @@ final class Coordinator: NSObject, MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         
         let item = "\(view.annotation!.subtitle!!)s"
+        let location = view.annotation!.title!!
         
         var ref: DatabaseReference!
         ref = Database.database().reference(withPath: item)
@@ -43,14 +44,12 @@ final class Coordinator: NSObject, MKMapViewDelegate {
         formatter.dateFormat = "yyyy-MM-dd"
         let currentDate = formatter.string(from: Date())
         
-        ref.child("per location").observeSingleEvent(of: .value, with: { (snapshot) in
-            if let value = snapshot.value as? [String: [String: Int]] {
-                let location = view.annotation!.title!!
-                let label = UILabel()
-                label.text = "\(value[location] != nil ? value[location]![currentDate, default: 0] : 0) pending \(item)"
-                label.textColor = UIColor.darkGray
-                view.detailCalloutAccessoryView = label
-            }
+        ref.child("per location").child(location).child(currentDate).observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? Int ?? 0
+            let label = UILabel()
+            label.text = "\(value) pending \(item)"
+            label.textColor = UIColor.darkGray
+            view.detailCalloutAccessoryView = label
         })
     }
 }
