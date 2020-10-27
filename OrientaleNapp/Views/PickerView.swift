@@ -12,6 +12,7 @@ struct PickerView: View {
     @Binding var showPickerView: Bool
     
     var items = ["Coffee", "Pizza", "Toy", "Book"]
+    @State var selectedPlace: Locations?
     @State private var selectedItem = 0
     @State var numberOfItems: Int = 1
     
@@ -22,12 +23,13 @@ struct PickerView: View {
         NavigationView {
             
             VStack {
-                Text ("You selected \(items[selectedItem])")
-                    .font(.title3)
-                    .fontWeight(.regular)
-                    .padding()
-                    .foregroundColor(Color.black)
-                
+                NavigationLink (
+                    destination: SearchView(),
+                    label: {
+                        Text("Add location")
+                            .foregroundColor(.black)
+                    })
+
                 
                 Picker(selection: $selectedItem, label: Text("")) {
                     
@@ -36,9 +38,8 @@ struct PickerView: View {
                     }
                 }
                 
-                
                 Image("\(items[selectedItem])")
-                
+            
                 HStack {
                     Image("")
                         .resizable()
@@ -59,6 +60,17 @@ struct PickerView: View {
                         .scaledToFit()
                 }
                 
+                Spacer ()
+                    .frame(height: 0.0)
+                
+                Text ("You selected \(items[selectedItem])")
+                    .font(.title3)
+                    .fontWeight(.regular)
+                    .padding()
+                    .foregroundColor(Color.black)
+                
+                Spacer ()
+                    .frame(height: 40.0)
                 
                 Stepper(value: $numberOfItems, in: 1...50, label:{
                     Text ("Number of items: \(numberOfItems)")
