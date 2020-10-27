@@ -79,7 +79,7 @@ struct PickerView: View {
                 },
                 trailing: Button(action: {
                     self.showPickerView = false
-                    addCoffee()
+                    updateDatabase()
                 } ) {
                     Text("Done").bold()
                 }
@@ -87,23 +87,37 @@ struct PickerView: View {
             .foregroundColor(Color("newColor7"))
         }
     }
-}
-
-func addCoffee() {
-    var ref: DatabaseReference!
-    ref = Database.database().reference()
     
-    ref.runTransactionBlock({ (currentData: MutableData) -> TransactionResult in
-        if var post = currentData.value as? [String: Int] {
-            post["coffees"]! += 1
-            currentData.value = post
-            
+    func updateDatabase() {
+        let path = "\(self.items[self.selectedItem].lowercased())s"
+        var ref: DatabaseReference!
+        ref = Database.database().reference(withPath: path)
+        
+        ref.runTransactionBlock({ (currentData: MutableData) -> TransactionResult in
+            if var post = currentData.value as? [String: [String: Any]] {
+                
+                let formatter = DateFormatter()
+                formatter.dateFormat = "yyyy-MM-dd"
+                let currentDate = formatter.string(from: Date())
+                
+                var totalCounter = post["per day"]![currentDate] as? Int ?? 0
+                totalCounter += self.numberOfItems
+                
+                var locationStats = post["per location"]![self.selectedPlace!.title] as? [String: Int] ?? [currentDate: 0]
+                locationStats[currentDate, default: 0] += self.numberOfItems
+                
+                post["per day"]![currentDate] = totalCounter as Any?
+                post["per location"]![self.selectedPlace!.title] = locationStats as Any?
+                
+                currentData.value = post
+                
+                return TransactionResult.success(withValue: currentData)
+            }
             return TransactionResult.success(withValue: currentData)
-        }
-        return TransactionResult.success(withValue: currentData)
-    }) { (error, committed, snapshot) in
-        if let error = error {
-            print(error.localizedDescription)
+        }) { (error, committed, snapshot) in
+            if let error = error {
+                print(error.localizedDescription)
+            }
         }
     }
 }
