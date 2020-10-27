@@ -10,6 +10,7 @@
 		190A07442541CB5F008E90C2 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190A07432541CB5F008E90C2 /* ExploreView.swift */; };
 		190A07552541CEB7008E90C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190A07542541CEB7008E90C2 /* ContentView.swift */; };
 		190A075C2541D2DA008E90C2 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190A075B2541D2DA008E90C2 /* LogoView.swift */; };
+		191BB7FF25483AF0007CD2D4 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BB7FE25483AF0007CD2D4 /* ViewModel.swift */; };
 		523B8345254083DC001A5C1B /* OrientaleNappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B8344254083DC001A5C1B /* OrientaleNappApp.swift */; };
 		523B8349254083DE001A5C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523B8348254083DE001A5C1B /* Assets.xcassets */; };
 		523B834C254083DE001A5C1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523B834B254083DE001A5C1B /* Preview Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		190A07432541CB5F008E90C2 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		190A07542541CEB7008E90C2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		190A075B2541D2DA008E90C2 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		191BB7FE25483AF0007CD2D4 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		1B80FBF27D34952B10F3E85C /* Pods-OrientaleNapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrientaleNapp.debug.xcconfig"; path = "Target Support Files/Pods-OrientaleNapp/Pods-OrientaleNapp.debug.xcconfig"; sourceTree = "<group>"; };
 		523B8341254083DC001A5C1B /* OrientaleNapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrientaleNapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		523B8344254083DC001A5C1B /* OrientaleNappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientaleNappApp.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		F5D80081254346290008D6D4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				191BB7FE25483AF0007CD2D4 /* ViewModel.swift */,
 				F5D80082254346290008D6D4 /* Item.swift */,
 				F558D790254625420024F2A8 /* Location.swift */,
 			);
@@ -314,6 +317,7 @@
 				190A07552541CEB7008E90C2 /* ContentView.swift in Sources */,
 				190A075C2541D2DA008E90C2 /* LogoView.swift in Sources */,
 				F4C4D8D52542EB67003C8949 /* PickerView.swift in Sources */,
+				191BB7FF25483AF0007CD2D4 /* ViewModel.swift in Sources */,
 				F52E0C332542F10E00379B7F /* LocationManager.swift in Sources */,
 				190A07442541CB5F008E90C2 /* ExploreView.swift in Sources */,
 				F5D80086254346360008D6D4 /* RowView.swift in Sources */,
