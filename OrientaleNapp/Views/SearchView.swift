@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct SearchView: View {
+    @Binding var selectedItem: Locations?
     @State private var searchText = ""
     @ObservedObject private var viewModel = ViewModel()
-    
+    init(item: Binding<Locations?>) {
+        self._selectedItem = item
+    }
     var body: some View {
         VStack {
             TextField("Search places...", text: $searchText)
             List(viewModel.locations.filter { $0.title.hasPrefix(searchText) }) { place in
-                PlaceRow(place: place)
+                PlaceRow(place: place).onTapGesture {
+                    selectedItem = place
+                }
             }
         }.padding()
     }
@@ -36,8 +41,4 @@ struct PlaceRow: View {
     }
 }
 
-struct SearchView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchView()
-    }
-}
+
