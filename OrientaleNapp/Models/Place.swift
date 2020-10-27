@@ -247,5 +247,17 @@ var places = [
     Place(title: "Il fuori orario", location: CLLocation(latitude: 40.8192275, longitude: 14.1749772)),
     Place(title: "Enzo di Nocera", location: CLLocation(latitude: 40.845963, longitude: 14.227867)),
     Place(title: "Marotta & Cafiero Editori", location: CLLocation(latitude: 40.9132820, longitude: 14.2353350)),
+    Place(title: "Mondadori - Piazza Bovio", location: CLLocation(latitude: 40.843657, longitude: 14.254792)),
+    Place(title: "Mondadori - Port'Alba", location: CLLocation(latitude: 40.849256, longitude: 14.251529)),
+    Place(title: "Mondadori - Via Luca Giordano", location: CLLocation(latitude: 40.845084, longitude: 14.227960)),
+    Place(title: "Mondadori - Via Frangiato", location: CLLocation(latitude: 40.860127, longitude: 14.218958)),
+    Place(title: "Feltrinelli - Via Santa Caterina", location: CLLocation(latitude: 40.834713, longitude: 14.242172)),
+    Place(title: "Feltrinelli - Piazza Garibaldi", location: CLLocation(latitude: 40.851879, longitude: 14.271881)),
+    Place(title: "Feltrinelli - Via Greci", location: CLLocation(latitude: 40.841602, longitude: 14.249362)),
+    Place(title: "Feltrinelli - Corso Lucci", location: CLLocation(latitude: 40.848986, longitude: 14.274777)),
+    Place(title: "L'Apostrofo - Via Port'Alba", location: CLLocation(latitude: 40.849441, longitude: 14.250959)),
+    Place(title: "Libreria Langella", location: CLLocation(latitude: 40.849431, longitude: 14.251242)),
+    Place(title: "A Store", location: CLLocation(latitude: 40.849425, longitude: 14.251120)),
+    Place(title: "Libreria Pacifico Nunzio", location: CLLocation(latitude: 40.849562, longitude: 14.251394)),
     Place(title: "Ubik", location: CLLocation(latitude: 40.8481022, longitude: 14.2542706))
 ]
