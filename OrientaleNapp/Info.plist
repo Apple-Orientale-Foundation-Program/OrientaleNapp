@@ -45,9 +45,9 @@
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIColorName</key>
-		<string>color2</string>
+		<string>newColor10</string>
 		<key>UIImageName</key>
-		<string>Logo</string>
+		<string>newlogo</string>
 	</dict>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>

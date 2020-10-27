@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -90,7 +90,6 @@
 				1B80FBF27D34952B10F3E85C /* Pods-OrientaleNapp.debug.xcconfig */,
 				04FEBE840D8A0097F5CA8435 /* Pods-OrientaleNapp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
