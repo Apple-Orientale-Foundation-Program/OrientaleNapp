@@ -13,5 +13,60 @@
 		"name": "Ubik",
 		"latitude": 40.8481022,
 		"longitude": 14.2542706
-	}
+	},
+    {
+        "name": "Mondadori - Piazza Bovio",
+        "latitude": 40.843657,
+        "longitude": 14.254792
+    },
+    {
+        "name": "Mondadori - Via Luca Giordano",
+        "latitude": 40.849256,
+        "longitude": 14.251529
+    },
+    {
+        "name": "Mondadori - Via Frangiato",
+        "latitude": 40.860127,
+        "longitude": 14.218958
+    },
+    {
+        "name": "Feltrinelli - Via Santa Caterina",
+        "latitude": 40.834713,
+        "longitude": 14.242172
+    },
+    {
+        "name": "Feltrinelli - Via dei Greci",
+        "latitude": 40.841602,
+        "longitude": 14.249362
+    },
+    {
+        "name": "Feltrinelli - Corso Arnando Lucci",
+        "latitude": 40.848986,
+        "longitude": 14.274777
+    },
+    {
+        "name": "Feltrinelli - Piazza Gariabldi",
+        "latitude": 40.851879,
+        "longitude": 14.271881
+    },
+    {
+        "name": "L'apostrofo - Via Port'Alba",
+        "latitude": 40.849441,
+        "longitude": 14.250959
+    },
+    {
+        "name": "Libreria Langella",
+        "latitude": 40.849431,
+        "longitude": 14.251242
+    },
+    {
+        "name": "A Store",
+        "latitude": 40.849425,
+        "longitude": 14.251120
+    },
+    {
+        "name": "Libreria Pacifico Nunzio",
+        "latitude": 40.849562,
+        "longitude": 14.251394
+    }
 ]

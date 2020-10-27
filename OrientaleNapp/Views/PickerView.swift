@@ -10,9 +10,8 @@ import FirebaseDatabase
 
 struct PickerView: View {
     @Binding var showPickerView: Bool
-    
     var items = ["Coffee", "Pizza", "Toy", "Book"]
-    @State var selectedPlace: Locations?
+    @State private var selectedPlace: Locations?
     @State private var selectedItem = 0
     @State var numberOfItems: Int = 1
     
@@ -24,11 +23,12 @@ struct PickerView: View {
             
             VStack {
                 NavigationLink (
-                    destination: SearchView(),
-                    label: {
-                        Text("Add location")
-                            .foregroundColor(.black)
-                    })
+                    destination: SearchView(selectedItem: $selectedPlace)){
+                    Text(selectedPlace == nil ? "Add place" : selectedPlace!.title)
+                        .font(.title3)
+                        .foregroundColor(.black)
+                }
+                Text("")
 
                 
                 Picker(selection: $selectedItem, label: Text("")) {
@@ -74,7 +74,8 @@ struct PickerView: View {
                 
                 Stepper(value: $numberOfItems, in: 1...50, label:{
                     Text ("Number of items: \(numberOfItems)")
-                }).padding(.all)
+                        .font(.title3)
+                }).padding(.all, 27.0)
                 .foregroundColor(.black)
                 
             }
