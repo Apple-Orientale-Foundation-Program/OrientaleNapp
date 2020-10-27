@@ -12,6 +12,7 @@
 		190A075C2541D2DA008E90C2 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190A075B2541D2DA008E90C2 /* LogoView.swift */; };
 		191BB7FF25483AF0007CD2D4 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BB7FE25483AF0007CD2D4 /* ViewModel.swift */; };
 		191BB80625483E01007CD2D4 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BB80525483E01007CD2D4 /* Place.swift */; };
+		2511BE8925483F550086467C /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2511BE8825483F550086467C /* SearchView.swift */; };
 		523B8345254083DC001A5C1B /* OrientaleNappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B8344254083DC001A5C1B /* OrientaleNappApp.swift */; };
 		523B8349254083DE001A5C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523B8348254083DE001A5C1B /* Assets.xcassets */; };
 		523B834C254083DE001A5C1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523B834B254083DE001A5C1B /* Preview Assets.xcassets */; };
@@ -19,7 +20,6 @@
 		BAF95C302546C5AA00ED3620 /* toy.json in Resources */ = {isa = PBXBuildFile; fileRef = BAF95C2F2546C5AA00ED3620 /* toy.json */; };
 		BAF95C332546C92400ED3620 /* pizza.json in Resources */ = {isa = PBXBuildFile; fileRef = BAF95C322546C92400ED3620 /* pizza.json */; };
 		BAF95C362546CB2800ED3620 /* book.json in Resources */ = {isa = PBXBuildFile; fileRef = BAF95C352546CB2800ED3620 /* book.json */; };
-		D698D3AE2546C16E00118711 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D698D3AD2546C16E00118711 /* Launch Screen.storyboard */; };
 		F4C4D8D52542EB67003C8949 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C4D8D42542EB67003C8949 /* PickerView.swift */; };
 		F5032C2C2542F1A300BD5FB1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5032C2B2542F1A300BD5FB1 /* Coordinator.swift */; };
 		F52E0C292542F02300379B7F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52E0C282542F02300379B7F /* MapView.swift */; };
@@ -40,6 +40,7 @@
 		191BB7FE25483AF0007CD2D4 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		191BB80525483E01007CD2D4 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		1B80FBF27D34952B10F3E85C /* Pods-OrientaleNapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrientaleNapp.debug.xcconfig"; path = "Target Support Files/Pods-OrientaleNapp/Pods-OrientaleNapp.debug.xcconfig"; sourceTree = "<group>"; };
+		2511BE8825483F550086467C /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		523B8341254083DC001A5C1B /* OrientaleNapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrientaleNapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		523B8344254083DC001A5C1B /* OrientaleNappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientaleNappApp.swift; sourceTree = "<group>"; };
 		523B8348254083DE001A5C1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,7 +49,6 @@
 		BAF95C2F2546C5AA00ED3620 /* toy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = toy.json; sourceTree = "<group>"; };
 		BAF95C322546C92400ED3620 /* pizza.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pizza.json; sourceTree = "<group>"; };
 		BAF95C352546CB2800ED3620 /* book.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = book.json; sourceTree = "<group>"; };
-		D698D3AD2546C16E00118711 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F4C4D8D42542EB67003C8949 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		F5032C2B2542F1A300BD5FB1 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F52E0C282542F02300379B7F /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -79,11 +79,11 @@
 			children = (
 				190A07542541CEB7008E90C2 /* ContentView.swift */,
 				190A07432541CB5F008E90C2 /* ExploreView.swift */,
-				D698D3AD2546C16E00118711 /* Launch Screen.storyboard */,
 				F52E0C282542F02300379B7F /* MapView.swift */,
 				190A075B2541D2DA008E90C2 /* LogoView.swift */,
 				F4C4D8D42542EB67003C8949 /* PickerView.swift */,
 				F5D80085254346360008D6D4 /* RowView.swift */,
+				2511BE8825483F550086467C /* SearchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -260,7 +260,6 @@
 				523B834C254083DE001A5C1B /* Preview Assets.xcassets in Resources */,
 				BAF95C332546C92400ED3620 /* pizza.json in Resources */,
 				BAF95C302546C5AA00ED3620 /* toy.json in Resources */,
-				D698D3AE2546C16E00118711 /* Launch Screen.storyboard in Resources */,
 				523B8349254083DE001A5C1B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +323,7 @@
 				191BB7FF25483AF0007CD2D4 /* ViewModel.swift in Sources */,
 				F52E0C332542F10E00379B7F /* LocationManager.swift in Sources */,
 				190A07442541CB5F008E90C2 /* ExploreView.swift in Sources */,
+				2511BE8925483F550086467C /* SearchView.swift in Sources */,
 				F5D80086254346360008D6D4 /* RowView.swift in Sources */,
 				523B8345254083DC001A5C1B /* OrientaleNappApp.swift in Sources */,
 				F558D791254625420024F2A8 /* Location.swift in Sources */,
