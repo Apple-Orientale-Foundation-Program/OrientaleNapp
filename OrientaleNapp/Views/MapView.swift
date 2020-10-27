@@ -37,6 +37,7 @@ struct MapView: UIViewRepresentable {
         for location in locations {
             let annotation = MKPointAnnotation()
             annotation.title = location.name
+            annotation.subtitle = item.name
             annotation.coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
             uiView.addAnnotation(annotation)
         }
