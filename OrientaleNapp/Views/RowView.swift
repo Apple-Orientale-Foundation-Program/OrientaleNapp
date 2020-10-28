@@ -11,7 +11,7 @@ import FirebaseDatabase
 struct RowView: View {
     
     @State var item: Item
-    @State var databaseData: Int?
+    @State var currentItems: String?
     
     var body: some View {
         HStack {
@@ -19,10 +19,10 @@ struct RowView: View {
                 .resizable()
                 .frame(width: 100, height: 100)
                 .foregroundColor(.orange)
-            VStack{
+            VStack(alignment: .leading){
                 Text("Pending \(item.name.capitalized)")
                     .fontWeight(.bold)
-                Text("\(self.databaseData ?? 0) pending \(item.name)s")
+                Text(currentItems ?? "")
                     .font(.footnote)
                     .onAppear(perform: {
                         self.loadData()
@@ -40,7 +40,10 @@ struct RowView: View {
         let currentDate = formatter.string(from: Date())
         
         ref.child("per day").child(currentDate).observe(DataEventType.value, with: { (snapshot) in
-            self.databaseData = snapshot.value as? Int ?? 0
+            let databaseData = snapshot.value as? Int ?? 0
+            withAnimation {
+                self.currentItems = "\(databaseData) pending \(item.name)s"
+            }
         })
     }
 }
