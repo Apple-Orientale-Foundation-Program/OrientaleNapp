@@ -15,17 +15,17 @@ struct PickerView: View {
     @State private var selectedPlace: Location?
     @State private var selectedItem = 0
     @State var numberOfItems: Int = 1
+    @State private var showAlert = false
     
     var body: some View {
         
         NavigationView {
-            
             Form {
-                
-                
-                Section(header: Text("Donation type")) {
+                Section(
+                    header: Text("Donation type")
+                ) {
                     HStack {
-                        Image("\(items[selectedItem])")
+                        Image(items[selectedItem])
                         
                         Picker(
                             selection: $selectedItem,
@@ -33,52 +33,53 @@ struct PickerView: View {
                         ) {
                             ForEach(0 ..< items.count) {
                                 Text(self.items[$0])
-                                    .foregroundColor($0 == selectedItem ?
-                                                        Color(.black) :
-                                                        Color(.gray))
+                                    .foregroundColor(
+                                        $0 == selectedItem ?
+                                        Color(.black) :
+                                        Color(.gray)
+                                    )
                             }
                         }
                         .onChange(of: selectedItem) { _ in
                             selectedPlace = nil
                         }
-                        
-                        
                     }
-                    
                 }
                 
-                
-                
-                Section(header: Text("Location")) {
-                    NavigationLink (
-                        destination: SearchView(selectedItem: items[selectedItem], selectedPlace: $selectedPlace)
+                Section(
+                    header: Text("Location")
+                ) {
+                    NavigationLink(
+                        destination: SearchView(
+                            selectedItem: items[selectedItem],
+                            selectedPlace: $selectedPlace
+                        )
                     ) {
-                        
                         HStack {
-                            
-                            
                             HStack {
                                 Image(systemName: "mappin.circle.fill")
                                     .resizable()
-                                    .frame( width: 30.0, height: 30.0)
+                                    .frame(width: 30.0, height: 30.0)
                                     .foregroundColor(.red)
-                                Text(selectedPlace == nil ?
-                                        "Add place" :
-                                        selectedPlace!.title)
+                                Text(
+                                    selectedPlace == nil ?
+                                    "Add place" :
+                                    selectedPlace!.title
+                                )
                                     .font(.title3)
                                     .foregroundColor(.black)
                                     .padding(.horizontal)
                                 
                                 
-                            }.padding(.all, 27.0)
+                            }
+                            .padding(.all, 27.0)
                         }
-                        
-                        
                     }
-                    
                 }
-    
-                Section(header: Text("Number of Items")) {
+                
+                Section(
+                    header: Text("Number of Items")
+                ) {
                     Stepper(
                         value: $numberOfItems,
                         in: 1...50,
@@ -86,11 +87,10 @@ struct PickerView: View {
                             Text ("\(numberOfItems)")
                                 .font(.largeTitle)
                                 .fontWeight(.semibold)
-                                
-                        })
+                        }
+                    )
                         .padding(.all, 27.0)
                         .foregroundColor(.black)
-                    
                 }
             }
             .navigationBarTitle(
@@ -100,20 +100,32 @@ struct PickerView: View {
             .navigationBarItems(
                 leading: Button(action: {
                     self.showPickerView = false
-                } ) {
+                }) {
                     Text("Cancel").bold()
                 },
                 trailing: Button(action: {
                     if selectedPlace != nil {
                         self.showPickerView = false
                         updateDatabase()
+                    } else {
+                        showAlert = true
                     }
-                } ) {
+                }) {
                     Text("Done").bold()
+                }
+                .alert(isPresented: $showAlert) {
+                    Alert(
+                        title: Text(""),
+                        message: Text("Please select a place"),
+                        dismissButton: .default(
+                            Text("OK")
+                        )
+                    )
                 }
             )
             .foregroundColor(Color("newColor7"))
-        }.accentColor(Color("newColor7"))
+        }
+        .accentColor(Color("newColor7"))
     }
     
     func updateDatabase() {
