@@ -21,15 +21,6 @@ struct PickerView: View {
         NavigationView {
             
             VStack {
-                NavigationLink (
-                    destination: SearchView(selectedItem: $selectedPlace)
-                ) {
-                    Text(selectedPlace == nil ?
-                            "Add place" :
-                            selectedPlace!.title)
-                        .font(.title3)
-                        .foregroundColor(.black)
-                }
                 
                 Picker(
                     selection: $selectedItem,
@@ -38,8 +29,8 @@ struct PickerView: View {
                     ForEach(0 ..< items.count) {
                         Text(self.items[$0])
                             .foregroundColor($0 == selectedItem ?
-                                Color("newColor7") :
-                                Color("newColor1"))
+                                                Color("newColor7") :
+                                                Color("newColor1"))
                     }
                 }
                 
@@ -55,7 +46,33 @@ struct PickerView: View {
                     .foregroundColor(Color.black)
                 
                 Spacer()
-                    .frame(height: 40.0)
+                    
+                
+                NavigationLink (
+                    destination: SearchView(selectedItem: $selectedPlace)
+                ) {
+                    
+                    HStack {
+                        
+                        
+                        HStack {
+                            Image(systemName: "mappin.circle.fill")
+                            Text(selectedPlace == nil ?
+                                    "Add place" :
+                                    selectedPlace!.title)
+                                .font(.title3)
+                                .foregroundColor(.black)
+                            
+                            
+                        }.padding(.all, 27.0)
+                        Spacer()
+                        
+                        
+                    }
+                    
+                }
+                
+                
                 
                 Stepper(
                     value: $numberOfItems,
@@ -66,6 +83,7 @@ struct PickerView: View {
                     })
                     .padding(.all, 27.0)
                     .foregroundColor(.black)
+                Spacer()
             }
             .navigationBarTitle(
                 Text("Pended items"),
