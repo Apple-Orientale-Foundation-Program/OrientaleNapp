@@ -13,8 +13,8 @@
 "Donation type" = "Tipo di donazione";
 "Location" = "Luogo";
 "Number of Items" = "Numero di Oggetti";
-"Search places..." = "Search places...";
-"Pending %@" = "Pending %@";
+"Search places..." = "Cerca...";
+"Pending %@" = "%@ Sospeso";
 
 //traduzioni che non funzionano
 "Coffee" = "Caffè";
