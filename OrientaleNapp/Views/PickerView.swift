@@ -34,8 +34,8 @@ struct PickerView: View {
                             ForEach(0 ..< items.count) {
                                 Text(self.items[$0])
                                     .foregroundColor($0 == selectedItem ?
-                                                        Color("newColor7") :
-                                                        Color("newColor1"))
+                                                        Color(.black) :
+                                                        Color(.gray))
                             }
                         }
                         
@@ -74,8 +74,7 @@ struct PickerView: View {
                     }
                     
                 }
-                
-                
+    
                 Section(header: Text("Number of Items")) {
                     Stepper(
                         value: $numberOfItems,
@@ -111,7 +110,7 @@ struct PickerView: View {
                 }
             )
             .foregroundColor(Color("newColor7"))
-        }
+        }.accentColor(Color("newColor7"))
     }
     
     func updateDatabase() {
