@@ -14,7 +14,7 @@
 "Location" = "Luogo";
 "Number of Items" = "Numero di Oggetti";
 "Search places..." = "Cerca...";
-"Pending %@" = "Pending %@";
+"Pending %@" = "%@ Sospeso";
 
 //traduzioni che non funzionano
 "Coffee" = "Caffè";
