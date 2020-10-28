@@ -18,6 +18,7 @@ final class Coordinator: NSObject, MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
         let identifier = "Placemark"
         
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
@@ -34,22 +35,24 @@ final class Coordinator: NSObject, MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         
-        let item = "\(view.annotation!.subtitle!!)s"
-        let location = view.annotation!.title!!
-        
-        var ref: DatabaseReference!
-        ref = Database.database().reference(withPath: item)
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        let currentDate = formatter.string(from: Date())
-        
-        ref.child("per location").child(location).child(currentDate).observeSingleEvent(of: .value, with: { (snapshot) in
-            let value = snapshot.value as? Int ?? 0
-            let label = UILabel()
-            label.text = "\(value) pending \(item)"
-            label.textColor = UIColor.darkGray
-            view.detailCalloutAccessoryView = label
-        })
+        if let annotation = view.annotation as? PlaceAnnotation {
+            let item = "\(annotation.item!)s"
+            let location = annotation.id!
+            
+            var ref: DatabaseReference!
+            ref = Database.database().reference(withPath: item)
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd"
+            let currentDate = formatter.string(from: Date())
+            
+            ref.child("per location").child(String(location)).child(currentDate).observeSingleEvent(of: .value, with: { (snapshot) in
+                let value = snapshot.value as? Int ?? 0
+                let label = UILabel()
+                label.text = "\(value) pending \(item)"
+                label.textColor = UIColor.darkGray
+                view.detailCalloutAccessoryView = label
+            })
+        }
     }
 }

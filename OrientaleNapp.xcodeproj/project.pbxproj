@@ -20,6 +20,7 @@
 		F5032C2C2542F1A300BD5FB1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5032C2B2542F1A300BD5FB1 /* Coordinator.swift */; };
 		F52E0C292542F02300379B7F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52E0C282542F02300379B7F /* MapView.swift */; };
 		F52E0C332542F10E00379B7F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52E0C322542F10E00379B7F /* LocationManager.swift */; };
+		F5C87EEE2549654D00EE84D2 /* PointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C87EED2549654D00EE84D2 /* PointAnnotation.swift */; };
 		F5D80083254346290008D6D4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D80082254346290008D6D4 /* Item.swift */; };
 		F5D80086254346360008D6D4 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D80085254346360008D6D4 /* RowView.swift */; };
 		F5E77BFB25470D1D00CACFE1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5E77BFA25470D1D00CACFE1 /* GoogleService-Info.plist */; };
@@ -42,6 +43,7 @@
 		F5032C2B2542F1A300BD5FB1 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F52E0C282542F02300379B7F /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		F52E0C322542F10E00379B7F /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		F5C87EED2549654D00EE84D2 /* PointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointAnnotation.swift; sourceTree = "<group>"; };
 		F5D800612542F4F80008D6D4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5D80082254346290008D6D4 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		F5D80085254346360008D6D4 /* RowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			children = (
 				F5D80082254346290008D6D4 /* Item.swift */,
 				191BB80525483E01007CD2D4 /* Place.swift */,
+				F5C87EED2549654D00EE84D2 /* PointAnnotation.swift */,
 				191BB7FE25483AF0007CD2D4 /* ViewModel.swift */,
 			);
 			path = Models;
@@ -278,6 +281,7 @@
 				191BB80625483E01007CD2D4 /* Place.swift in Sources */,
 				F4C4D8D52542EB67003C8949 /* PickerView.swift in Sources */,
 				191BB7FF25483AF0007CD2D4 /* ViewModel.swift in Sources */,
+				F5C87EEE2549654D00EE84D2 /* PointAnnotation.swift in Sources */,
 				F52E0C332542F10E00379B7F /* LocationManager.swift in Sources */,
 				190A07442541CB5F008E90C2 /* ExploreView.swift in Sources */,
 				2511BE8925483F550086467C /* SearchView.swift in Sources */,
