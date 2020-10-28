@@ -11,7 +11,6 @@ import FirebaseDatabase
 struct PickerView: View {
     
     @Binding var showPickerView: Bool
-    var items = ["Coffee", "Pizza", "Toy", "Book"]
     @State private var selectedPlace: Location?
     @State private var selectedItem = 0
     @State var numberOfItems: Int = 1
@@ -25,14 +24,14 @@ struct PickerView: View {
                     header: Text("Donation type")
                 ) {
                     HStack {
-                        Image(items[selectedItem])
+                        Image(items[selectedItem].name.capitalized)
                         
                         Picker(
                             selection: $selectedItem,
                             label: Text("")
                         ) {
                             ForEach(0 ..< items.count) {
-                                Text(self.items[$0])
+                                Text(items[$0].name.capitalized)
                                     .foregroundColor(
                                         $0 == selectedItem ?
                                         Color(.black) :
@@ -51,7 +50,7 @@ struct PickerView: View {
                 ) {
                     NavigationLink(
                         destination: SearchView(
-                            selectedItem: items[selectedItem],
+                            selectedItem: items[selectedItem].name.capitalized,
                             selectedPlace: $selectedPlace
                         )
                     ) {
@@ -129,7 +128,7 @@ struct PickerView: View {
     }
     
     func updateDatabase() {
-        let path = "\(self.items[self.selectedItem].lowercased())s"
+        let path = "\(items[self.selectedItem].name)s"
         var ref: DatabaseReference!
         ref = Database.database().reference(withPath: path)
         
