@@ -20,7 +20,7 @@ struct RowView: View {
                 .frame(width: 100, height: 100)
                 .foregroundColor(.orange)
             VStack(alignment: .leading){
-                Text("Pending \(item.name.capitalized)")
+                Text(NSLocalizedString("Pending \(item.name.capitalized)", comment: ""))
                     .fontWeight(.bold)
                 Text(currentItems ?? "")
                     .font(.footnote)
@@ -41,8 +41,9 @@ struct RowView: View {
         
         ref.child("per day").child(currentDate).observe(DataEventType.value, with: { (snapshot) in
             let databaseData = snapshot.value as? Int ?? 0
+            let localizedString = NSLocalizedString("pending \(item.name)s", comment: "")
             withAnimation {
-                self.currentItems = "\(databaseData) pending \(item.name)s"
+                self.currentItems = "\(databaseData) \(localizedString)"
             }
         })
     }

@@ -48,8 +48,9 @@ final class Coordinator: NSObject, MKMapViewDelegate {
             
             ref.child("per location").child(String(location)).child(currentDate).observeSingleEvent(of: .value, with: { (snapshot) in
                 let value = snapshot.value as? Int ?? 0
+                let localizedString = NSLocalizedString("pending \(item)", comment: "")
                 let label = UILabel()
-                label.text = "\(value) pending \(item)"
+                label.text = "\(value) \(localizedString)"
                 label.textColor = UIColor.darkGray
                 view.detailCalloutAccessoryView = label
             })

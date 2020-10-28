@@ -31,7 +31,7 @@ struct PickerView: View {
                             label: Text("")
                         ) {
                             ForEach(0 ..< items.count) {
-                                Text(items[$0].name.capitalized)
+                                Text(NSLocalizedString(items[$0].name.capitalized, comment: ""))
                                     .foregroundColor(
                                         $0 == selectedItem ?
                                         Color(.black) :
@@ -62,7 +62,7 @@ struct PickerView: View {
                                     .foregroundColor(.red)
                                 Text(
                                     selectedPlace == nil ?
-                                    "Add place" :
+                                    NSLocalizedString("Add place", comment: "") :
                                     selectedPlace!.title
                                 )
                                     .font(.title3)

@@ -24,7 +24,8 @@ struct SearchView: View {
                     presentationMode.wrappedValue.dismiss()
                 })
             }
-        }.padding()
+        }
+        .padding()
     }
 }
 
