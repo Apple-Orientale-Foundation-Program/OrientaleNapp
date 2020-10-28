@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  OrientaleNapp
+
+  Created by Khrystyna Shala on 28/10/2020.
+  
+*/
+//traduzioni che funzionano
+"Explore" = "Esplora";
+"Pended items" = "Oggetti sospesi";
+"Cancel" = "Annulla";
+"Done" = "Salva";
+"Donation type" = "Tipo di donazione";
+"Location" = "Luogo";
+"Number of Items" = "Numero di Oggetti";
+"Search places..." = "Search places...";
+"Pending %@" = "Pending %@";
+
+//traduzioni che non funzionano
+"Coffee" = "Caffè";
+"pizza" = "pizza";
+"toy" = "toy";
+"book" = "book";
+"Pending" = "Sospeso";
+"pending" = "sospeso";
+"Pending Coffee" = "Caffè Sospeso";
+"pending coffees" = "caffè sospesi";
+"Pending Pizza" = "Pizza Sospesa";
+"pending pizzas" = "pizze sospese";
+"Pending Toy" = "Giocattolo Sospeso";
+"pending toys" = "giocattoli sospesi";
+"Pending Book" = "Libro Sospeso";
+"pending books" = "libri sospesi";
+"Add place" = "Aggiungi luogo";
