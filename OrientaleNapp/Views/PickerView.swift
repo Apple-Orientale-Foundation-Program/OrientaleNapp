@@ -20,52 +20,55 @@ struct PickerView: View {
         
         NavigationView {
             
-            VStack {
+            Form {
                 
-                Picker(
-                    selection: $selectedItem,
-                    label: Text("")
-                ) {
-                    ForEach(0 ..< items.count) {
-                        Text(self.items[$0])
-                            .foregroundColor($0 == selectedItem ?
-                                                Color("newColor7") :
-                                                Color("newColor1"))
+                
+                Section(header: Text("Donation type")) {
+                    HStack {
+                        Image("\(items[selectedItem])")
+                        
+                        Picker(
+                            selection: $selectedItem,
+                            label: Text("")
+                        ) {
+                            ForEach(0 ..< items.count) {
+                                Text(self.items[$0])
+                                    .foregroundColor($0 == selectedItem ?
+                                                        Color("newColor7") :
+                                                        Color("newColor1"))
+                            }
+                        }
+                        
+                        
                     }
+                    
                 }
                 
-                Image("\(items[selectedItem])")
                 
-                Spacer()
-                    .frame(height: 0.0)
                 
-                Text ("You selected \(items[selectedItem])")
-                    .font(.title3)
-                    .fontWeight(.regular)
-                    .padding()
-                    .foregroundColor(Color.black)
-                
-                Spacer()
-                    
-                
-                NavigationLink (
-                    destination: SearchView(selectedItem: $selectedPlace)
-                ) {
-                    
-                    HStack {
-                        
+                Section(header: Text("Location")) {
+                    NavigationLink (
+                        destination: SearchView(selectedItem: $selectedPlace)
+                    ) {
                         
                         HStack {
-                            Image(systemName: "mappin.circle.fill")
-                            Text(selectedPlace == nil ?
-                                    "Add place" :
-                                    selectedPlace!.title)
-                                .font(.title3)
-                                .foregroundColor(.black)
                             
                             
-                        }.padding(.all, 27.0)
-                        Spacer()
+                            HStack {
+                                Image(systemName: "mappin.circle.fill")
+                                    .resizable()
+                                    .frame( width: 30.0, height: 30.0)
+                                    .foregroundColor(.red)
+                                Text(selectedPlace == nil ?
+                                        "Add place" :
+                                        selectedPlace!.title)
+                                    .font(.title3)
+                                    .foregroundColor(.black)
+                                    .padding(.horizontal)
+                                
+                                
+                            }.padding(.all, 27.0)
+                        }
                         
                         
                     }
@@ -73,17 +76,20 @@ struct PickerView: View {
                 }
                 
                 
-                
-                Stepper(
-                    value: $numberOfItems,
-                    in: 1...50,
-                    label: {
-                        Text ("Number of items: \(numberOfItems)")
-                            .font(.title3)
-                    })
-                    .padding(.all, 27.0)
-                    .foregroundColor(.black)
-                Spacer()
+                Section(header: Text("Number of Items")) {
+                    Stepper(
+                        value: $numberOfItems,
+                        in: 1...50,
+                        label: {
+                            Text ("\(numberOfItems)")
+                                .font(.largeTitle)
+                                .fontWeight(.semibold)
+                                
+                        })
+                        .padding(.all, 27.0)
+                        .foregroundColor(.black)
+                    
+                }
             }
             .navigationBarTitle(
                 Text("Pended items"),
