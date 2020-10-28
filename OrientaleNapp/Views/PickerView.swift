@@ -12,7 +12,7 @@ struct PickerView: View {
     
     @Binding var showPickerView: Bool
     var items = ["Coffee", "Pizza", "Toy", "Book"]
-    @State private var selectedPlace: Locations?
+    @State private var selectedPlace: Location?
     @State private var selectedItem = 0
     @State var numberOfItems: Int = 1
     
@@ -105,11 +105,11 @@ struct PickerView: View {
                 var totalCounter = post["per day"]![currentDate] as? Int ?? 0
                 totalCounter += self.numberOfItems
                 
-                var locationStats = post["per location"]![self.selectedPlace!.title] as? [String: Int] ?? [currentDate: 0]
+                var locationStats = post["per location"]![String(self.selectedPlace!.id)] as? [String: Int] ?? [currentDate: 0]
                 locationStats[currentDate, default: 0] += self.numberOfItems
                 
                 post["per day"]![currentDate] = totalCounter as Any?
-                post["per location"]![self.selectedPlace!.title] = locationStats as Any?
+                post["per location"]![String(self.selectedPlace!.id)] = locationStats as Any?
                 
                 currentData.value = post
                 

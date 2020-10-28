@@ -10,7 +10,7 @@ import SwiftUI
 struct SearchView: View {
     @State private var searchText = ""
     @ObservedObject private var viewModel = ViewModel()
-    @Binding var selectedItem: Locations?
+    @Binding var selectedItem: Location?
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -27,7 +27,7 @@ struct SearchView: View {
 }
 
 struct PlaceRow: View {
-    var place: Locations
+    var place: Location
     
     var body: some View {
         HStack {

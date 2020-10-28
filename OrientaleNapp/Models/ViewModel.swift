@@ -12,7 +12,7 @@ import Combine
 class ViewModel: NSObject, ObservableObject {
     private let locationManager = CLLocationManager()
     
-    @Published private(set) var locations = [Locations]()
+    @Published private(set) var locations = [Location]()
     
     override init() {
         super.init()
@@ -32,6 +32,6 @@ extension ViewModel: CLLocationManagerDelegate {
         
         self.locations.removeAll()
         places.sort { currentLocation.distance(from: $0.location) < currentLocation.distance(from: $1.location) }
-        places.forEach { self.locations.append(Locations(title: $0.title, distance: currentLocation.distance(from: $0.location) / 1000))}
+        places.forEach { self.locations.append(Location(id: $0.id, title: $0.title, distance: currentLocation.distance(from: $0.location) / 1000))}
     }
 }

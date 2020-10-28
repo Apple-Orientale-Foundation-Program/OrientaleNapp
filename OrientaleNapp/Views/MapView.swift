@@ -33,12 +33,10 @@ struct MapView: UIViewRepresentable {
         let span = MKCoordinateSpan(latitudeDelta: 0.009, longitudeDelta: 0.009)
         let region = MKCoordinateRegion(center: coordinate, span: span)
         uiView.setRegion(region, animated: true)
-        let locations = Bundle.main.decode ("\(item.name)")
-        for location in locations {
+        for place in places {
             let annotation = MKPointAnnotation()
-            annotation.title = location.name
-            annotation.subtitle = item.name
-            annotation.coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+            annotation.title = place.title
+            annotation.coordinate = place.location.coordinate
             uiView.addAnnotation(annotation)
         }
     }
