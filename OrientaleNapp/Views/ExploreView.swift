@@ -15,7 +15,7 @@ struct ExploreView: View {
         NavigationView {
             Form {
                 ForEach(items) { item in
-                    Section {
+                    //Section {
                         NavigationLink(
                             destination:
                                 MapView(item: item)
@@ -24,7 +24,7 @@ struct ExploreView: View {
                                 RowView(item: item)
                             }
                         )
-                    }
+                    //}
                 }
             }
             .navigationBarTitle("Explore")
