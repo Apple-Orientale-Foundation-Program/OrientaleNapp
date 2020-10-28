@@ -38,6 +38,9 @@ struct PickerView: View {
                                                         Color(.gray))
                             }
                         }
+                        .onChange(of: selectedItem) { _ in
+                            selectedPlace = nil
+                        }
                         
                         
                     }
