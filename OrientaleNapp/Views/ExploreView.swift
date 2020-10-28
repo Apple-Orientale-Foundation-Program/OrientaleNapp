@@ -15,16 +15,14 @@ struct ExploreView: View {
         NavigationView {
             Form {
                 ForEach(items) { item in
-                    Section {
-                        NavigationLink(
-                            destination:
-                                MapView(item: item)
-                                    .navigationBarTitleDisplayMode(.inline),
-                            label: {
-                                RowView(item: item)
-                            }
-                        )
-                    }
+                    NavigationLink(
+                        destination:
+                            MapView(item: item)
+                                .navigationBarTitleDisplayMode(.inline),
+                        label: {
+                            RowView(item: item)
+                        }
+                    )
                 }
             }
             .navigationBarTitle("Explore")
