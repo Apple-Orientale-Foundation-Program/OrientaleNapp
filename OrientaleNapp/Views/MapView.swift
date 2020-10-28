@@ -37,7 +37,7 @@ struct MapView: UIViewRepresentable {
             return place.item == item.name
         }
         for place in listOfPlaces {
-            let annotation = PlaceAnnotation()
+            let annotation = PointAnnotation()
             annotation.id = place.id
             annotation.item = item.name
             annotation.title = place.title

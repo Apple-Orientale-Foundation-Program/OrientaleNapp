@@ -35,7 +35,7 @@ final class Coordinator: NSObject, MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         
-        if let annotation = view.annotation as? PlaceAnnotation {
+        if let annotation = view.annotation as? PointAnnotation {
             let item = "\(annotation.item!)s"
             let location = annotation.id!
             

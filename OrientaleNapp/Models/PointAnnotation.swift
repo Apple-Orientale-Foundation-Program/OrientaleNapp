@@ -8,7 +8,7 @@
 import Foundation
 import MapKit
 
-class PlaceAnnotation : MKPointAnnotation {
+class PointAnnotation : MKPointAnnotation {
     var id: Int!
     var item: String!
 }
