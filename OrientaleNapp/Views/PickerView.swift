@@ -48,7 +48,7 @@ struct PickerView: View {
                 
                 Section(header: Text("Location")) {
                     NavigationLink (
-                        destination: SearchView(selectedItem: $selectedPlace)
+                        destination: SearchView(selectedItem: items[selectedItem], selectedPlace: $selectedPlace)
                     ) {
                         
                         HStack {

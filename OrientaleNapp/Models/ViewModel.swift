@@ -32,6 +32,6 @@ extension ViewModel: CLLocationManagerDelegate {
         
         self.locations.removeAll()
         places.sort { currentLocation.distance(from: $0.location) < currentLocation.distance(from: $1.location) }
-        places.forEach { self.locations.append(Location(id: $0.id, title: $0.title, distance: currentLocation.distance(from: $0.location) / 1000))}
+        places.forEach { self.locations.append(Location(id: $0.id, title: $0.title, item: $0.item, distance: currentLocation.distance(from: $0.location) / 1000))}
     }
 }

@@ -18,6 +18,7 @@ struct Place {
 struct Location: Identifiable {
     var id: Int
     var title: String
+    var item: String
     var distance: Double?
 }
 

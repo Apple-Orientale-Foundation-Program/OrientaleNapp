@@ -10,15 +10,17 @@ import SwiftUI
 struct SearchView: View {
     @State private var searchText = ""
     @ObservedObject private var viewModel = ViewModel()
-    @Binding var selectedItem: Location?
+    var selectedItem: String
+    @Binding var selectedPlace: Location?
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack {
             TextField("Search places...", text: $searchText)
-            List(viewModel.locations.filter { $0.title.hasPrefix(searchText) }) { place in
+            List(viewModel.locations.filter { $0.title.hasPrefix(searchText) && $0.item == selectedItem.lowercased()
+            }) { place in
                 PlaceRow(place: place).onTapGesture(perform: {
-                    selectedItem = place
+                    selectedPlace = place
                     presentationMode.wrappedValue.dismiss()
                 })
             }
