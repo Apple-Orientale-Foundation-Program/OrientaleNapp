@@ -33,8 +33,13 @@ struct MapView: UIViewRepresentable {
         let span = MKCoordinateSpan(latitudeDelta: 0.009, longitudeDelta: 0.009)
         let region = MKCoordinateRegion(center: coordinate, span: span)
         uiView.setRegion(region, animated: true)
-        for place in places {
-            let annotation = MKPointAnnotation()
+        let listOfPlaces = places.filter { place in
+            return place.item == item.name
+        }
+        for place in listOfPlaces {
+            let annotation = PointAnnotation()
+            annotation.id = place.id
+            annotation.item = item.name
             annotation.title = place.title
             annotation.coordinate = place.location.coordinate
             uiView.addAnnotation(annotation)
