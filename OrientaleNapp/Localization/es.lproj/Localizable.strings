@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  OrientaleNapp
+
+  Created by Khrystyna Shala on 28/10/2020.
+  
+*/
+"Explore" = "Explorar";
+"Pended items" = "Artículos pendientes";
+"Cancel" = "Cancelar";
+"Done" = "Guardar";
+"Donation type" = "Tipo de donación";
+"Location" = "Ubicación";
+"Add place" = "Añadir lugar";
+"Number of Items" = "Número de artículos";
+"Search places..." = "Buscar...";
+"Pending Coffees" = "Cafés pendientes";
+"Pending Pizzas" = "Pizzas pendientes";
+"Pending Toys" = "Juguetes pendientes";
+"Pending Books" = "Libros pendientes";
+"Pending coffees" = "Cafés pendientes";
+"Pending pizzas" = "Pizzas pendientes";
+"Pending toys" = "Juguetes pendientes";
+"Pending books" = "Libros pendientes";
+"Coffee" = "Café";
+"Pizza" = "Pizza";
+"Toy" = "Juguete";
+"Book" = "Libro";
+"Today" = "Hoy";
+"This week" = "Esta semana";
+"All Items" = "Todo";
+
+//
+"This feature requires your location" = "Esta función requiere tu ubicación";

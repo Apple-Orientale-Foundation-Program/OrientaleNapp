@@ -5,27 +5,29 @@
   Created by Khrystyna Shala on 28/10/2020.
   
 */
-"Explore" = "Explore";
-"Pended items" = "Pended items";
-"Cancel" = "Cancel";
-"Done" = "Done";
-"Donation type" = "Donation Type";
-"Location" = "Location";
-"Add place" = "Add place";
-"Number of Items" = "Number of Items";
-"Search places..." = "Search places...";
-"Pending Coffee" = "Pending Coffee";
-"Pending Pizza" = "Pending Pizza";
-"Pending Toy" = "Pending Toy";
-"Pending Book" = "Pending Book";
-"pending coffees" = "pending coffees";
-"pending pizzas" = "pending pizzas";
-"pending toys" = "pending toys";
-"pending books" = "pending books";
-"Coffee" = "Coffee";
+"Explore" = "Erforschen";
+"Pended items" = "Schwebende Gegenstände";
+"Cancel" = "Abbrechen";
+"Done" = "Fertig";
+"Donation type" = "Spendenart";
+"Location" = "Ort";
+"Add place" = "Ort hinzufügen";
+"Number of Items" = "Stückzahl";
+"Search places..." = "Suche...";
+"Pending Coffees" = "Schwebende Kaffees";
+"Pending Pizzas" = "Schwebende Pizzen";
+"Pending Toys" = "Schwebende Spielzeuge";
+"Pending Books" = "Schwebende Bücher";
+"Pending coffees" = "Schwebende Kaffees";
+"Pending pizzas" = "Schwebende Pizzen";
+"Pending toys" = "Schwebende Spielzeuge";
+"Pending books" = "Schwebende Bücher";
+"Coffee" = "Kaffee";
 "Pizza" = "Pizza";
-"Toy" = "Toy";
-"Book" = "Book";
-
+"Toy" = "Spielzeug";
+"Book" = "Buch";
+"Today" = "Heute";
+"This week" = "Diese Woche";
+"All Items" = "Alle Gegenstände";
 //
-"This feature requires your location" = "This feature requires your location";
+"This feature requires your location" = "Diese Funktion benötigt deinen Standort";

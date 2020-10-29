@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  OrientaleNapp
+
+  Created by Khrystyna Shala on 28/10/2020.
+  
+*/
+"Explore" = "Огляд";
+"Pended items" = "Підвішені речі";
+"Cancel" = "Скасувати";
+"Done" = "Готово";
+"Donation type" = "Тип пожертви";
+"Location" = "Місцезнаходження";
+"Add place" = "Додати місце";
+"Number of Items" = "Кількість";
+"Search places..." = "Пошук...";
+"Pending Coffees" = "Підвішані Кави";
+"Pending Pizzas" = "Підвішані Піци";
+"Pending Toys" = "Підвішані Іграшки";
+"Pending Books" = "Підвішані Книги";
+"Pending coffees" = "Підвішані кави";
+"Pending pizzas" = "Підвішані піци";
+"Pending toys" = "Підвішані іграшки";
+"Pending books" = "Підвішані книги";
+"Coffee" = "Кава";
+"Pizza" = "Піца";
+"Toy" = "Іграшка";
+"Book" = "Книга";
+"Today" = "Сьогодні";
+"This week" = "Цього тижня";
+"All Items" = "Все";
+
+//
+"This feature requires your location" = "This feature requires your location";
