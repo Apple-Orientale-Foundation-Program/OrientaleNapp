@@ -37,13 +37,29 @@ struct RowView: View {
         
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
-        let currentDate = formatter.string(from: Date())
         
-        ref.child("per day").child(currentDate).observe(DataEventType.value, with: { (snapshot) in
-            let databaseData = snapshot.value as? Int ?? 0
-            let localizedString = NSLocalizedString("pending \(item.name)s", comment: "")
-            withAnimation {
-                self.currentItems = "\(databaseData) \(localizedString)"
+        let currentDate = formatter.string(from: Date())
+        let startDate = Date(timeIntervalSinceNow: -604800)
+        
+        ref.child("per day").observe(DataEventType.value, with: { (snapshot) in
+            if let databaseDict = snapshot.value as? [String: Int] {
+                let today = databaseDict[currentDate] ?? 0
+                var thisWeek = 0
+                var date = startDate
+                while date.compare(Date()) != .orderedDescending {
+                    var dateComponent = DateComponents()
+                    dateComponent.day = 1
+                    date = Calendar.current.date(byAdding: dateComponent, to: date)!
+                    let formattedDate = formatter.string(from: date)
+                    thisWeek += databaseDict[formattedDate] ?? 0
+                }
+                let localizedString = """
+                    \(NSLocalizedString("Today", comment: "")): \(today)
+                    \(NSLocalizedString("This week", comment: "")): \(thisWeek)
+                    """
+                withAnimation {
+                    self.currentItems = localizedString
+                }
             }
         })
     }
