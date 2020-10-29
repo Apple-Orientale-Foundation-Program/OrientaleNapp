@@ -5,27 +5,26 @@
   Created by Khrystyna Shala on 28/10/2020.
   
 */
-"Explore" = "Explore";
+"Explore" = "Explorer";
 "Pended items" = "Articles suspendus";
 "Cancel" = "Annuler";
 "Done" = "Terminé";
 "Donation type" = "Type de donation";
-"Location" = "Emplacement";
-"Add place" = "Ajoute un lieu";
+"Location" = "Position";
+"Add place" = "Ajouter un lieu";
 "Number of Items" = "Nombre d'articles";
-"Search places..." = "Recherche des lieux...";
+"Search places..." = "Rechercher lieu...";
 "Pending Coffee" = "Café Suspendu";
 "Pending Pizza" = "Pizza Suspendue";
 "Pending Toy" = "Jouet Suspendu";
 "Pending Book" = "Livre Suspendu";
-"pending coffees" = "cafés suspendus";
-"pending pizzas" = "pizzas suspendues";
-"pending toys" = "jouets suspendus";
-"pending books" = "livres suspendus";
 "Coffee" = "Café";
 "Pizza" = "Pizza";
 "Toy" = "Jouet";
 "Book" = "Livre";
+"Today" = "Aujourd'hui";
+"This week" = "Cette semaine";
+"All Items" = "Tous les Articles";
 
 //
-"This feature requires your location" = "Cette fonction requiert ta position";
+"This feature requires your location" = "Cette fonctionnalité requiert votre position";
