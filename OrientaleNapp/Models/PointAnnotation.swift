@@ -11,4 +11,5 @@ import MapKit
 class PointAnnotation : MKPointAnnotation {
     var id: Int!
     var item: String!
+    var pin: Bool!
 }

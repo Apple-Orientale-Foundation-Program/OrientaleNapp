@@ -44,6 +44,7 @@ struct MapView: UIViewRepresentable {
             let annotation = PointAnnotation()
             annotation.id = place.id
             annotation.item = item?.name ?? place.item
+            annotation.pin = item == nil
             annotation.title = place.title
             annotation.coordinate = place.location.coordinate
             uiView.addAnnotation(annotation)

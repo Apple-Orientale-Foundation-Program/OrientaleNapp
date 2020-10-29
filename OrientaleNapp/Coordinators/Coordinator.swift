@@ -24,7 +24,13 @@ final class Coordinator: NSObject, MKMapViewDelegate {
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
         
         if annotationView == nil {
-            annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            let customAnnotation = annotation as! PointAnnotation
+            if customAnnotation.pin == true {
+                annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                annotationView?.image = UIImage(named: customAnnotation.item + "map")
+            } else {
+                annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            }
             annotationView?.canShowCallout = true
         } else {
             annotationView?.annotation = annotation
