@@ -15,18 +15,21 @@
 "Add place" = "Aggiungi luogo";
 "Number of Items" = "Numero di oggetti";
 "Search places..." = "Cerca...";
-"Pending Coffee" = "Caffè sospeso";
-"Pending Pizza" = "Pizza sospesa";
-"Pending Toy" = "Giocattolo sospeso";
-"Pending Book" = "Libro sospeso";
-"pending coffees" = "caffè sospesi";
-"pending pizzas" = "pizze sospese";
-"pending toys" = "giocattoli sospesi";
-"pending books" = "libri sospesi";
+"Pending Coffees" = "Caffè sospesi";
+"Pending Pizzas" = "Pizze sospese";
+"Pending Toys" = "Giocattoli sospesi";
+"Pending Books" = "Libri sospesi";
+"Pending coffees" = "Caffè sospesi";
+"Pending pizzas" = "Pizze sospese";
+"Pending toys" = "Giocattoli sospesi";
+"Pending books" = "Libri sospesi";
 "Coffee" = "Caffè";
 "Pizza" = "Pizza";
 "Toy" = "Giocattolo";
 "Book" = "Libro";
+"Today" = "Oggi";
+"This week" = "Questa settimana";
+"All Items" = "Tutto";
 
 //traduzioni che non funzionano
 "This feature requires your location" = "Questa funzionalità richiede la tua posizione";

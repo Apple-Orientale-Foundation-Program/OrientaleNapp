@@ -20,7 +20,7 @@ struct RowView: View {
                 .frame(width: 100, height: 100)
                 .foregroundColor(.orange)
             VStack(alignment: .leading){
-                Text(NSLocalizedString("Pending \(item.name.capitalized)", comment: ""))
+                Text(NSLocalizedString("Pending \(item.name.capitalized)s", comment: ""))
                     .fontWeight(.bold)
                 Text(currentItems ?? "")
                     .font(.footnote)
