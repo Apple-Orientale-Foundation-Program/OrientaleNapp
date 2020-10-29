@@ -6,26 +6,26 @@
   
 */
 "Explore" = "Explore";
-"Pended items" = "Pended items";
-"Cancel" = "Cancel";
-"Done" = "Done";
-"Donation type" = "Donation Type";
-"Location" = "Location";
-"Add place" = "Add place";
-"Number of Items" = "Number of Items";
-"Search places..." = "Search places...";
-"Pending Coffee" = "Pending Coffee";
-"Pending Pizza" = "Pending Pizza";
-"Pending Toy" = "Pending Toy";
-"Pending Book" = "Pending Book";
-"pending coffees" = "pending coffees";
-"pending pizzas" = "pending pizzas";
-"pending toys" = "pending toys";
-"pending books" = "pending books";
-"Coffee" = "Coffee";
+"Pended items" = "Articles suspendus";
+"Cancel" = "Annuler";
+"Done" = "Terminé";
+"Donation type" = "Type de donation";
+"Location" = "Emplacement";
+"Add place" = "Ajoute un lieu";
+"Number of Items" = "Nombre d'articles";
+"Search places..." = "Recherche des lieux...";
+"Pending Coffee" = "Café Suspendu";
+"Pending Pizza" = "Pizza Suspendue";
+"Pending Toy" = "Jouet Suspendu";
+"Pending Book" = "Livre Suspendu";
+"pending coffees" = "cafés suspendus";
+"pending pizzas" = "pizzas suspendues";
+"pending toys" = "jouets suspendus";
+"pending books" = "livres suspendus";
+"Coffee" = "Café";
 "Pizza" = "Pizza";
-"Toy" = "Toy";
-"Book" = "Book";
+"Toy" = "Jouet";
+"Book" = "Livre";
 
 //
 "This feature requires your location" = "This feature requires your location";
