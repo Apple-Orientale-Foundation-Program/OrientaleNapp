@@ -47,11 +47,13 @@ final class Coordinator: NSObject, MKMapViewDelegate {
             let currentDate = formatter.string(from: Date())
             
             ref.child("per location").child(String(location)).child(currentDate).observeSingleEvent(of: .value, with: { (snapshot) in
+                let localizedLabel = NSLocalizedString("Today", comment: "")
                 let value = snapshot.value as? Int ?? 0
-                let localizedString = NSLocalizedString("pending \(item)", comment: "")
+                let localizedString = NSLocalizedString("Pending \(item)", comment: "")
                 let label = UILabel()
-                label.text = "\(value) \(localizedString)"
+                label.text = " \(localizedString) \(localizedLabel.lowercased()): \(value)"
                 label.textColor = UIColor.darkGray
+                label.textAlignment = .left
                 view.detailCalloutAccessoryView = label
             })
         }
