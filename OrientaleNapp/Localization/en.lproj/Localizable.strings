@@ -14,18 +14,21 @@
 "Add place" = "Add place";
 "Number of Items" = "Number of Items";
 "Search places..." = "Search places...";
-"Pending Coffee" = "Pending Coffee";
-"Pending Pizza" = "Pending Pizza";
-"Pending Toy" = "Pending Toy";
-"Pending Book" = "Pending Book";
-"pending coffees" = "pending coffees";
-"pending pizzas" = "pending pizzas";
-"pending toys" = "pending toys";
-"pending books" = "pending books";
+"Pending Coffees" = "Pending Coffees";
+"Pending Pizzas" = "Pending Pizzas";
+"Pending Toys" = "Pending Toys";
+"Pending Books" = "Pending Books";
+"Pending coffees" = "Pending coffees";
+"Pending pizzas" = "Pending pizzas";
+"Pending toys" = "Pending toys";
+"Pending books" = "Pending books";
 "Coffee" = "Coffee";
 "Pizza" = "Pizza";
 "Toy" = "Toy";
 "Book" = "Book";
+"Today" = "Today";
+"This week" = "This week";
+"All Items" = "All Items";
 
 //
 "This feature requires your location" = "This feature requires your location";

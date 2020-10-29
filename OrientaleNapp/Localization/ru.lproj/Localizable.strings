@@ -5,27 +5,29 @@
   Created by Khrystyna Shala on 28/10/2020.
   
 */
-"Explore" = "Explore";
-"Pended items" = "Pended items";
-"Cancel" = "Cancel";
-"Done" = "Done";
-"Donation type" = "Donation Type";
-"Location" = "Location";
-"Add place" = "Add place";
-"Number of Items" = "Number of Items";
-"Search places..." = "Search places...";
-"Pending Coffee" = "Pending Coffee";
-"Pending Pizza" = "Pending Pizza";
-"Pending Toy" = "Pending Toy";
-"Pending Book" = "Pending Book";
-"pending coffees" = "pending coffees";
-"pending pizzas" = "pending pizzas";
-"pending toys" = "pending toys";
-"pending books" = "pending books";
-"Coffee" = "Coffee";
-"Pizza" = "Pizza";
-"Toy" = "Toy";
-"Book" = "Book";
-
+"Explore" = "Обзор";
+"Pended items" = "Подвешенные вещи";
+"Cancel" = "Отмена";
+"Done" = "Готово";
+"Donation type" = "Тип пожертвования";
+"Location" = "Местонахождение";
+"Add place" = "Добавить место";
+"Number of Items" = "Количество";
+"Search places..." = "Поиск...";
+"Pending Coffees" = "Подвешенные Кофе";
+"Pending Pizzas" = "Подвешенные Пиццы";
+"Pending Toys" = "Подвешенные Игрушки";
+"Pending Books" = "Подвешенные Книги";
+"Pending coffees" = "Подвешенные кофе";
+"Pending pizzas" = "Подвешенные пиццы";
+"Pending toys" = "Подвешенные игрушки";
+"Pending books" = "Подвешенные книги";
+"Coffee" = "Кофе";
+"Pizza" = "Пицца";
+"Toy" = "Игрушка";
+"Book" = "Книга";
+"Today" = "Сегодня";
+"This week" = "На этой неделе";
+"All Items" = "Все";
 //
-"This feature requires your location" = "This feature requires your location";
+"This feature requires your location" = "Эта функция требует вашего местоположения";
