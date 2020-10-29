@@ -103,26 +103,18 @@ struct PickerView: View {
                     Text("Cancel").bold()
                 },
                 trailing: Button(action: {
-                    if selectedPlace != nil {
-                        self.showPickerView = false
-                        updateDatabase()
-                    } else {
-                        showAlert = true
-                    }
+                    self.showPickerView = false
+                    updateDatabase()
                 }) {
                     Text("Done").bold()
                 }
-                .alert(isPresented: $showAlert) {
-                    Alert(
-                        title: Text(""),
-                        message: Text("Please select a place"),
-                        dismissButton: .default(
-                            Text("OK")
-                        )
-                    )
-                }
+                .disabled(selectedPlace == nil)
+                .accentColor(
+                    selectedPlace == nil ?
+                    .gray :
+                    Color("newColor7")
+                )
             )
-            .foregroundColor(Color("newColor7"))
         }
         .accentColor(Color("newColor7"))
     }
