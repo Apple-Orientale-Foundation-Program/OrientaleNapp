@@ -10,22 +10,31 @@ import FirebaseDatabase
 
 struct RowView: View {
     
-    @State var item: Item
+    @State var item: Item?
     @State var currentItems: String?
     
     var body: some View {
         HStack {
-            Image(item.name.capitalized)
+            Image(item?.name.capitalized ?? "map")
                 .resizable()
                 .frame(width: 100, height: 100)
                 .foregroundColor(.orange)
             VStack(alignment: .leading){
-                Text(NSLocalizedString("Pending \(item.name.capitalized)s", comment: ""))
+                Text(
+                    NSLocalizedString(
+                        item != nil ?
+                        "Pending \(item!.name.capitalized)s" :
+                        "All Items",
+                        comment: ""
+                    )
+                )
                     .fontWeight(.bold)
                 Text(currentItems ?? "")
                     .font(.footnote)
                     .onAppear(perform: {
-                        self.loadData()
+                        if item != nil {
+                            self.loadData()
+                        }
                     })
             }
         }
@@ -33,7 +42,7 @@ struct RowView: View {
     
     func loadData() {
         var ref: DatabaseReference!
-        ref = Database.database().reference(withPath: "\(self.item.name)s")
+        ref = Database.database().reference(withPath: "\(self.item!.name)s")
         
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"

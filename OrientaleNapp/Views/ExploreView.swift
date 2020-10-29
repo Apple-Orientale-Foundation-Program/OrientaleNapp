@@ -24,6 +24,14 @@ struct ExploreView: View {
                         }
                     )
                 }
+                NavigationLink(
+                    destination:
+                        MapView()
+                            .navigationBarTitleDisplayMode(.inline),
+                    label: {
+                        RowView()
+                    }
+                )
             }
             .navigationBarTitle("Explore")
             .navigationBarItems(

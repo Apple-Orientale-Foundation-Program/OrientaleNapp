@@ -12,7 +12,7 @@ struct MapView: UIViewRepresentable {
     // commented out for now
     //@ObservedObject private var locationManager = LocationManager()
     
-    @State var item: Item
+    @State var item: Item?
     
     func makeUIView(context: Context) -> MKMapView {
         let map = MKMapView(frame: .zero)
@@ -34,12 +34,16 @@ struct MapView: UIViewRepresentable {
         let region = MKCoordinateRegion(center: coordinate, span: span)
         uiView.setRegion(region, animated: true)
         let listOfPlaces = places.filter { place in
-            return place.item == item.name
+            if item != nil {
+                return place.item == item!.name
+            } else {
+                return true
+            }
         }
         for place in listOfPlaces {
             let annotation = PointAnnotation()
             annotation.id = place.id
-            annotation.item = item.name
+            annotation.item = item?.name ?? place.item
             annotation.title = place.title
             annotation.coordinate = place.location.coordinate
             uiView.addAnnotation(annotation)
